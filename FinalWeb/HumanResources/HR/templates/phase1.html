@@ -1,0 +1,110 @@
+{% load static %}
+
+<script type="text/javascript" src="{% static 'js/addEmployee.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
+
+
+{%block content %}
+    
+<h1>Add Employee</h1>
+<br>
+<!-- <img src="Eventbrite-banner.png" class="here_icon"><br> -->
+<div class="sign">
+    <div id="R">
+        <form id="demo" onsubmit="return validateForm() , signup()"  method="post" action="addrecord/">
+            {% csrf_token %}
+            <br>
+            <div>
+                <!--Name-->
+                <label for="Username">Employee Name</label>
+                <input name="EmployeeName" type="text" id="EmployeeName"  placeholder="EMPLOYEE Name">
+            </div>
+            <br>
+            <div>
+                <!--ID-->
+                <label for="ID">Employee ID</label>
+                <input type="number" name="EmployeeID" id="EmployeeID"  required placeholder="Employee ID">
+            </div>
+            <br>
+            <div>
+                <!--Email-->
+                <label for="Email">Email</label>
+                <input type="text" id="email" name="email" required placeholder="EMPLOYEE Email">
+            </div>
+            <br>
+            <div>
+                <!--Phone Number-->
+                <label for="Phonenumber">Phone Number</label>
+                <input type="number" id="Phonenumber" name="phone"  required placeholder="Phonen Number">
+            </div>
+            <br>
+            <div>
+                <!--Addres-->
+                <label>Addres</label>
+                <input type="text" name="Addres" id="Addres" required placeholder="Addres">
+            </div>
+            <br>
+            <!-- salary -->
+
+            <div>
+                <label>Salary</label>
+                <input type="number" id="Salary" name="Salary" required placeholder="Salary">
+            </div>
+            <br>
+            <!-- Number of available vacation -->
+            <div>
+                <label>Number of available vacation</label>
+                <input type="number" name="NumberVacation" id="a1" required placeholder="Number of available vacation">
+            </div>
+            <br>
+            <!-- Number of actual approved vacation days -->
+            <div>
+                <label>Number of actual approved vacation days</label>
+                <input type="number" name="NumberApprovedVacation" id="a2" required
+                    placeholder="Number of actual approved vacation days">
+            </div>
+    </div>
+    <br>
+    <div id="R1">
+        <div>
+            <!--Birthday-->
+            <label for="Date">Birthdate</label>
+            <input type="date" id="Date"  required name="Date">
+        </div>
+        <br>
+        <!--Gender-->
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" required name="Gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="Gender" id="male" value="male">
+            <label for="male">Male</label>
+        </div>
+        <br>
+        <!--statue-->
+        <div>
+            <label for="Status">Status: </label>
+            <input type="radio" required name="Status" id="active" value="active">
+            <label for="active">Active</label>
+            <input type="radio" name="Status" id="inactive" value="inactive">
+            <label for="inactive">Inactive</label>
+        </div>
+        <br>
+        <!-- Marital status -->
+        <div>
+            <label for="Marital">Marital status: </label>
+            <input type="radio" required name="MARITALSTATUE" id="married" value="married">
+            <label for="married">Married</label>
+            <input type="radio" name="MARITALSTATUE" id="Single" value="Single">
+            <label for="Single">Single</label>
+        </div>
+        <br>
+    </div>
+    <input type="submit" value="Add">
+    <input type="reset" value="Reset">
+
+    </form>
+</div>
+
+
+{%endblock content %}
