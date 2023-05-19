@@ -19,6 +19,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('HR.urls')),
+    
+    #path('update/',include('HR.urls')),
     path('admin/', admin.site.urls),
     
 ]

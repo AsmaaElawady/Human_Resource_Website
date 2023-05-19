@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title> HR updating Page</title>
+        <meta name="description" content="Update Employee" />
+        <link rel="stylesheet" href="updateEmployee.css">
+
+        
+    </head>
+    <body> 
+        <!-- Navigation bar -->
+
+        <br>
+        <h2 id="edit"> Update Employee</h2>
+        <div class="whiteBox">
+            <form name="takeinfo" action="update.html">
+            <div id="bigDiv">
+                <div id="userName">
+                    <label for="Username">Employee Name</label>
+                    <input type="text" name="userName" id="us1" value="" placeholder="username" >
+                </div>
+                <div id="ID">
+                    <label for="ID">Employee ID</label>
+                    <input type="text" name="ID" id="id1" value="" placeholder="ID" >
+                    <div id="iderror"></div>
+                </div>
+                <span id="editButton">
+                    <br>
+                    <input type="submit" name="E" value="Edit" id="edit">
+                </span>
+            </div>
+            </form>
+            <form action="">
+                <span id="editButton">
+                    <br>
+                    <input type="submit" name="D" value="Delete" id="delete">
+                </span>
+            </form>
+        </div>
+        <script src="updateEmployee.js"></script>
+        </body>
+
+</html>
+
+{%endblock content %}
