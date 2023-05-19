@@ -1,7 +1,8 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import RegisterForm
+from .models import RegisterForm 
+from .models import Upform 
 
 def index(request):
   mymembers = RegisterForm.objects.all().values()
@@ -34,20 +35,24 @@ def addrecord(request):
   member.save()
   return HttpResponseRedirect(reverse('index'))
 #function to render the update page
-def update(request):
-  template = loader.get_template('update.html')
-  return HttpResponse(template.render({}, request))
 
+def update(request):
+    mymembers = RegisterForm.objects.all().values()
+    template = loader.get_template('update.html')
+    context = {
+      'mymembers': mymembers,
+    }
+    return HttpResponse(template.render(context, request))
+  #  template = loader.get_template('update.html')
+  #  return HttpResponse(template.render({}, request))
+
+def updateEmp(request ):
+    template = loader.get_template('editinfo.html')
+    return HttpResponse(template.render({}, request))
+
+  #template = loader.get_template('editinfo.html')
+  #return HttpResponse(template.render({}, request))
 
 #function to get the values the user entered 
 #employee's data for which to update or delete
-"""
-def getData(request):
-  mymembers = RegisterForm.objects.all().values()
-  template = loader.get_template('phase1.html')
-  context = {
-    'mymembers': mymembers,
-  }
-  return HttpResponse(template.render(context, request))
 
-  """

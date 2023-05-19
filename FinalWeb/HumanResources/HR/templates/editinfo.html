@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title> HR Editing Page</title>
+    <link rel="stylesheet" href="homePage.css">
+    <meta name="description" content="This is the editing page" />
+    <link rel="stylesheet" href="updateEmployee.css">
+
+</head>
+
+<body>
+    <div class="navBar">
+        <a class="active" href="HomePage.html">Home</a>
+        <a href="phase1.html">ADD EMPLOYEE</a>
+        <a href="projectPhase1.html">UPDATE EMPLOYEE</a>
+        <a href="searchEmp.html">SEARCH EMPLOYEE</a>
+        <a href="VR.html">VACATION REQUESTS</a>
+        <font class="logo"><b>FCAI</b></font>
+    </div>
+    <br><br><br>
+    <h1>Update Employee</h1>
+    <div class="bigdiv">
+        <form name="upform" action="">
+            <div class="radio1">
+                <div>
+                    <br>
+                    <label> Name</label>
+                    <input class="nametbup" type="text" id="new" name="nname" value={{nameEmp}}> <br>
+                </div>
+                <br>
+                <div>
+                    <label> ID </label>
+                    <input type="text" ID="newID"><br>
+                    <br>
+                </div>
+                <div>
+                    <label> Email </label>
+                    <input type="email" id="mail"><br>
+                </div>
+                <br>
+                <div>
+                    <label> Phone Number </label>
+                    <input type="number" id="num"><br>
+                </div>
+                <br>
+                <div>
+                    <label> Address </label>
+                    <input type="text" id="a"><br>
+                </div>
+                <br>
+                <div>
+                    <label> Salary </label>
+                    <input type="number" id="s"> <br>
+                </div>
+                <br>
+                <div>
+                    <label> Number of Available Vacation days </label>
+                    <input type="number" id="vacdays"> <br>
+                </div>
+                <br>
+                <div>
+                    <label> Number of Actual approved Vacation Days </label>
+                    <input type="number" id="approved"> <br>
+                </div>
+                <div>
+                    <label> Birth Date </label>
+                    <input type="date" id="d"><br>
+                </div>
+                <br>
+                <div class="choose1">
+                    <div class="choose1"> <label for="gender">Gender: </label>
+                    </div>
+                    <div class="choose">
+                        <input type="radio" required name="gender" id="female" value="female">
+                    </div>
+                    <div class="choose">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="choose1">
+                    <div class="choose">
+                        <input type="radio" required name="gender" id="male" value="male">
+                    </div>
+                    <div class="choose">
+                        <label for="male">Male</label>
+                    </div>
+                </div>
+                <br>
+                <!--statue-->
+                <div class="choose1">
+                    <div class="choose1"> <label for="gender">Status: </label></div>
+                    <div class="choose">
+                        <input type="radio" required name="status" id="active" value="Active">
+                    </div>
+                    <div class="choose">
+                        <label for="active">Active</label>
+                    </div>
+                </div>
+                <div class="choose1">
+                    <div class="choose">
+                        <input type="radio" required name="status" id="inactive" value="inactive">
+                    </div>
+                    <div class="choose">
+                        <label for="inactive">Inactive</label>
+                    </div>
+                </div>
+                <!-- Marital status -->
+                <div class="choose1">
+                    <div class="choose1"> <label for="gender">Marital Status: </label></div>
+                    <div class="choose">
+                        <input type="radio" required name="mstatus" id="married" value="married">
+                    </div>
+                    <div class="choose">
+                        <label for="Married">Married</label>
+                    </div>
+                </div>
+                <div class="choose1">
+                    <div class="choose">
+                        <input type="radio" required name="mstatus" id="single" value="single">
+                    </div>
+                    <div class="choose">
+                        <label for="Single">Single</label>
+                    </div>
+                </div>
+
+                <input type="submit" value="Update"><br>
+                <input type="reset" value="Reset">
+
+        </form>
+    </div>
+</body>
+
+
+
+
+</html>
+<script src="EditEmployee.js"></script>
