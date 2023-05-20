@@ -5,6 +5,10 @@ from .models import RegisterForm
 from .models import Upform 
 from django.shortcuts import render
 
+def nhome(request):
+    return render(request, 'home.html')
+
+
 def index(request):
   mymembers = RegisterForm.objects.all().values()
   template = loader.get_template('phase1.html')

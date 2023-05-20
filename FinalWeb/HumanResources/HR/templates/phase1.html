@@ -1,11 +1,11 @@
-{% extends 'navbar.html' %}
+{% include 'navbar.html' %}
 {% load static %}
 
-<script type="text/javascript" src="{% static 'js/addEmployee.js' %}"></script>
 <link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
 
 
-{%block content %}
+
+{% block content %}
     
 <h1>Add Employee</h1>
 <br>
@@ -108,4 +108,4 @@
 </div>
 
 
-{%endblock content %}
+{% endblock content %}

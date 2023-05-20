@@ -1,19 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/homePage.css' %}">
 
-{% load static%}
 
-<link rel="stylesheet" href="{%  static 'HomePage.css' %}" />
-<script src="{%  static 'HomePage.js' %}" ></script>
-  <!-- Navigation bar -->
-  <div class="navBar">
-    <a class="active" href="HomePage.html">Home</a>
-    <a href="phase1.html">ADD EMPLOYEE</a>
-    <a href="projectPhase1.html">UPDATE EMPLOYEE</a>
-    <a href="searchEmp.html">SEARCH EMPLOYEE</a>
-    <a href="VR.html">VACATION REQUESTS</a>
-    <font class="logo"><b>FCAI</b></font>
-</div>
-
-<br /><br /><br /><br />        
-
-{% block content %}
+<body>
+    <!-- Navigation bar -->
+    <div class="navBar">
+        <a class="active" href="HomePage.html">Home</a>
+        <a href="{% static 'html/phase1.html'%}">ADD EMPLOYEE</a>
+        <a href="projectPhase1.html">UPDATE EMPLOYEE</a>
+        <a href="searchEmp.html">SEARCH EMPLOYEE</a>
+        <a href="VR.html">VACATION REQUESTS</a>
+        <font class="logo"><b>FCAI</b></font>
+    </div>
+    <br><br><br><br>
+         
+</body>
+{% block content%}
 {% endblock content %}
