@@ -1,0 +1,137 @@
+
+body {
+    margin: 0;
+    background-image: url("HP2v3.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Add a black background color to the top navigation */
+
+.navBar{
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+.navBar a{
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
+
+
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}
+
+h1{
+    font-size: 27px;
+    font-family: Calibri,'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+}
+.searchbox{
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 35%;
+
+}
+
+
+#button{
+    height: 35px;
+    width: 320px;
+    margin-top: 20px;
+    border: 2px solid rgb(230, 242, 120);
+    background-color: rgba(4, 83, 148, 0.961);
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+   
+}
+#button:hover{
+    background-color: rgba(175, 75, 64, 0.961);
+}
+
+.inputbox{
+
+    height: 20px;
+    width: 150px;
+    border-radius: 7px;
+   
+}
+
+/* Style the table */
+table {
+    background-color: white;
+    padding: auto;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 9px;
+
+  }
+
+  /* Style the table header cells */
+  th {
+    background-color: rgba(175, 75, 64, 0.961);
+    color: white;
+    text-align: left;
+    padding: 8px;
+  }
+
+  /* Style the table data cells */
+  td {
+    background-color: white;
+    border: 1px solid white;
+    padding: 8px;
+  }
+
+  /* Add zebra-striping to the table rows */
+  tr:nth-child(even) {
+    background-color: white;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }

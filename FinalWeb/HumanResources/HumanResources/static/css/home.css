@@ -1,0 +1,185 @@
+.column1, .column2{
+    opacity: 1;
+    border: 3px solid #ddd;
+    border-radius: 5%;
+    float: left;
+    height: 400px;
+    width: 679px;
+    margin: 90px 15px 15px 15px;
+}
+
+.column3, .column4 {
+    opacity: 1;
+    border: 3px solid #ddd;
+    border-radius: 5%;
+    float: left;
+    height: 400px;
+    width: 679px;
+    margin: 15px;
+}
+ 
+.text1:hover, .text2:hover, .text3:hover, .text4:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.row1::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column1:hover, .column2:hover, .column3:hover, .column4:hover{
+    opacity: 0.7;
+}
+
+.img1:hover .text1, .img2:hover .text2, .img3:hover .text3, .img4:hover .text4 {
+    opacity: 1;
+}
+
+.text1{
+    border-radius: 25px;
+    background-color: rgb(31, 104, 173);
+    color: white;
+    font-size: 25px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.text2{
+    border-radius: 25px;
+    background-color: rgb(31, 104, 173);
+    color: white;
+    font-size: 25px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.text3{
+    border-radius: 25px;
+    background-color: rgb(31, 104, 173);
+    color: white;
+    font-size: 25px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 165%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.text4{
+    border-radius: 25px;
+    background-color: rgb(31, 104, 173);
+    color: white;
+    font-size: 25px;
+    padding: 16px 32px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 165%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+
+body {
+    margin: 0;
+    background-image: url("HP2v3.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*background-image that will not scroll with the page (fixed): */
+    background-size: cover;
+    }
+
+/* Add a black background color to the top navigation */
+.navBar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
+
+.text {
+    top:50%;
+    left: 0;
+    right: 0;
+    max-width: 60%;
+    padding-top: 130px;
+    padding-left: 45px;
+    padding-right: 3em;
+}
+
+h1{
+    color: #12519f;
+    font-size: 80px;
+    margin: 0;
+}
+
+p{
+   font-size: 18px;
+    color: #000000;
+}
+
+.button {
+    background-color: #12519f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 0px 0px 46px;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}

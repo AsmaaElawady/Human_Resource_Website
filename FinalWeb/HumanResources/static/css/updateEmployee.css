@@ -1,0 +1,195 @@
+
+h1{
+    color: #12519f;
+    font-size: 40px;
+    margin: 0;
+}
+
+.main{
+    width: 360px;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+form{
+    width: 300px;
+    margin-left: 20px;
+    
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type=submit],input[type=reset] {
+    height: 35px;
+    width: 320px;
+    margin-top: 20px;
+    border: none;
+    background-color: #12519f;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#userName
+{
+    padding-top: 7px;
+}
+
+.bigdiv
+{
+    width: 360px;
+    height: 1110px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 10px;   
+}
+
+.selects
+{
+    display: inline-flex;
+}
+.speciallbl
+{
+    size: 2px;
+}
+
+.radios
+{
+    display: inline;
+}
+
+#iderror
+{
+    color : red;
+}
+h2{
+    text-align: center;
+    padding-top: 1%;
+    color: #12519f;
+    font-size: 40px;
+    margin-bottom:1%;
+}
+
+body {
+    margin: 0;
+    background-image: url("HP2v3.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Add a black background color to the top navigation */
+.navBar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
+
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}
+
+.whiteBox{
+    width: 360px;
+    height: 285px;
+    padding: 1px 5px;
+    background-color: white;
+    margin: auto;
+    border-radius: 3px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type=submit]{
+    height: 35px;
+    width: 320px;
+    margin-top: 2px;
+    border: none;
+    background-color: #12519f;
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+}
+
+#delete{
+    margin-top: 0px;
+}
+.choose
+{
+    display: inline-block;
+    inline-size: 20px;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.choose1
+{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+}

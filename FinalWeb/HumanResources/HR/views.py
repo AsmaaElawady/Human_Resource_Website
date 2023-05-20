@@ -3,6 +3,7 @@ from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
 from .models import Upform 
+from django.shortcuts import render
 
 def index(request):
   mymembers = RegisterForm.objects.all().values()
@@ -56,3 +57,10 @@ def updateEmp(request ):
 #function to get the values the user entered 
 #employee's data for which to update or delete
 
+
+
+
+# def delete(request, event_id):
+#     member = RegisterForm.objects.get(pk=event_id)
+#     member.delete()
+#     return HttpResponseRedirect(reverse('index'))
