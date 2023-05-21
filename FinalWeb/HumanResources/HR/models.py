@@ -27,6 +27,6 @@ class RegisterForm(models.Model):
     MARITALSTATUE=models.CharField(max_length=8,choices=ms)
 
 
-class Upform(models.Model):
-    EmployeeID=models.CharField(max_length=100,primary_key=True)
-    EmployeeName=models.CharField(max_length=100)
+# class Upform(models.Model):
+#     EmployeeID=models.CharField(max_length=100,primary_key=True)
+#     EmployeeName=models.CharField(max_length=100)
