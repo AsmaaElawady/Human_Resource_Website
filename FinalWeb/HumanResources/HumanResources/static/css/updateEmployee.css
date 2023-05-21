@@ -89,7 +89,7 @@ h2{
 
 body {
     margin: 0;
-    background-image: url("#HP2v3.png");
+    background-image: url("HP2v3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

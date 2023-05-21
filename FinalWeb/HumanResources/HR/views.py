@@ -57,7 +57,7 @@ def delete(request, EmployeeID):
 
 def update(request, EmployeeID):
   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
-  template = loader.get_template('update.html')
+  template = loader.get_template('editinfo.html')
   context = {
     'mymember': mymember,
   }
