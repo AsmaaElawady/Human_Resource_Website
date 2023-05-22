@@ -74,7 +74,8 @@ def updaterecord(request, EmployeeID):
   return HttpResponseRedirect(reverse('index'))
 
 
-
+def searchEmployee(request):
+  return render(request,'searchEmp.html')
 
 
 

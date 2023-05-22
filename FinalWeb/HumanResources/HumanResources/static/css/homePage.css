@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url("C:\Users\Dell\Documents\GitHub\WebDesign\FinalWeb\HumanResources\HumanResources\static\image\HP2v3.png");
+    background-image: url("#HP2v3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -22,6 +22,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 /* Change the color of links on hover */
