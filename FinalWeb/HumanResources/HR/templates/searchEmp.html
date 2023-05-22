@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'navbar.html' %}
+    {% load static %}
+    <meta charset="UTF-8" />
+    <title>Search Employee</title>
+    <link rel="stylesheet" href="{% static 'css/searchEmp.css'%}" />
+    <meta name="description" content="" />
+  </head>
+
+  <body>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="searchbox">
+      <br />
+      <h1>Search Employee</h1>
+      <br />
+      <form>
+        <label for="empId">Enter Employee first name:</label><br /><br />
+        <input id="empName" class="inputbox" type="text" name="eName" /><br /><br
+        /><br />
+        <button id="button" class="submitbutton">Search</button>
+      </form>
+<br><br><br>
+      <!-- Container for the search results -->
+      <div id="searchResults"></div>
+    </div>
+</body>
+</html>
