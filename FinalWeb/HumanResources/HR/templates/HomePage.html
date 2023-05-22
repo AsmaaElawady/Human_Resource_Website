@@ -1,46 +1,25 @@
-{% include 'navbar.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'navbar.html' %}
+    {% load static %}
 
-<link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
-
-
-
-{% block content %}
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
         <title>
             Home Page
         </title>
-        <link rel="stylesheet" href="homePage.css">
-    </head> -->
+        <link rel="stylesheet" href="{% static 'css/homePage.css'%} ">
 
-    <body>
-        <!-- Navigation bar -->
-        <!-- <div class="navBar">
-            <a class="active" href="HomePage.html">Home</a>
-            <a href="phase1.html">ADD EMPLOYEE</a>
-            <a href="projectPhase1.html">UPDATE EMPLOYEE</a>
-            <a href="searchEmp.html">SEARCH EMPLOYEE</a>
-            <a href="VR.html">VACATION REQUESTS</a>
-            <font class="logo"><b>FCAI</b></font>
-        </div> -->
-        
-        <br /><br /><br /><br /><br /><br /><br /><br /><br />           
+</head>
+<body>
+ <br /><br /><br /><br /><br /><br /><br /><br /><br />
 	    <h1>WELCOME TO FCAI<br>HUMAN RESOURCES SYSTEM
         </h1>
-        
+
         <h3>
-                This system will help you organize your work, task and save your time, also will help you manage the employees easier 
+                This system will help you organize your work, task and save your time, also will help you manage the employees easier
                 <br>
                 and faster, and track them easier, and to get your work done easier and faster.
-        </h3> 
-    </body>
-
+        </h3>
+</body>
 </html>
-{% endblock content %}
