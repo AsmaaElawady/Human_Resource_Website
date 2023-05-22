@@ -80,7 +80,6 @@ def table(request):
   }
   return HttpResponse(template.render(context, request))
 
-
 def HomePage(request):
   return render(request, 'HomePage.html')
 
@@ -88,6 +87,15 @@ def HomePage(request):
 
 
 
+
+
+def updateEmployee(request):
+  return render(request,"updateEmployee.html")
+
+
+def VRDisplay(request ):
+    template = loader.get_template('VR.html')
+    return HttpResponse(template.render({}, request))
 
 
 

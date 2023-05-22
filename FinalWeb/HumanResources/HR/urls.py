@@ -10,6 +10,14 @@ urlpatterns = [
     path('delete/<int:EmployeeID>', views.delete, name='delete'),
     path('update/<int:EmployeeID>', views.update, name='update'),
     path('update/updaterecord/<int:EmployeeID>', views.updaterecord, name='updaterecord'),
+    
+    
+    
+    
+    # salmaa
+    path('searchEmployee/',views.searchEmployee,name = 'searchEmployee'),
+    path('updateEmployee/', views.updateEmployee, name = 'updateEmployee'),
+
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),
     # # path('delete/<event_id>', views.delete, name='delete'),

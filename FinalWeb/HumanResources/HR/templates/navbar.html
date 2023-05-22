@@ -8,8 +8,9 @@
         <a class="active" href="{% url 'HomePage' %}">Home</a>
         <a href="{% url 'phase1' %}">ADD EMPLOYEE</a>
         <a href="{% url 'table' %}">UPDATE EMPLOYEE</a>
-        <a href="searchEmp.html">SEARCH EMPLOYEE</a>
-        <a href="VR.html">VACATION REQUESTS</a>
+        <a href="{% url 'searchEmployee' %}" >Search Employee</a>
+        <a href="{% url "VRDisplay" %}">Vacation Requests</a>
+
         <font class="logo"><b>FCAI</b></font>
     </div>
     <br><br><br><br>
