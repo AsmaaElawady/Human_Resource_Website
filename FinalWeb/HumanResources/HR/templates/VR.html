@@ -1,0 +1,30 @@
+
+{% include 'navbar.html' %}
+{% load static %}
+{% block content%}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="../../static/css/VRCSS.css" /> 
+        <title>
+            Vacations Requests 
+        </title>
+    
+    </head>
+    <body>
+        <div><h2> Vacations Requests </h2></div>
+        
+    </br></br>
+    <!-- Container for the search results -->
+    <div id="searchResults"></div>
+        <div>
+            {{ table }}
+
+        </div>
+        <script src ="{% static 'js/vr.js' %}"></script>
+
+    </body>
+</html>
+{%endblock content %}

@@ -86,6 +86,9 @@ def updateEmployee(request):
   return render(request,"updateEmployee.html")
 
 
+def VRDisplay(request ):
+    template = loader.get_template('VR.html')
+    return HttpResponse(template.render({}, request))
 
 
 
@@ -95,12 +98,12 @@ def updateEmployee(request):
 
 # def update(request):
 #     mymembers = RegisterForm.objects.all().values()
-#     template = loader.get_template('updateEmployee.html')
+#     template = loader.get_template('update.html')
 #     context = {
 #       'mymembers': mymembers,
 #     }
 #     return HttpResponse(template.render(context, request))
-#   #  template = loader.get_template('updateEmployee.html')
+#   #  template = loader.get_template('update.html')
 #   #  return HttpResponse(template.render({}, request))
 
 # def updateEmp(request ):
