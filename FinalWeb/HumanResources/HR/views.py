@@ -81,7 +81,9 @@ def Table(request):
   }
   return HttpResponse(template.render(context, request))
 
-
+def VRDisplay(request ):
+    template = loader.get_template('VR.html')
+    return HttpResponse(template.render({}, request))
 
 
 
