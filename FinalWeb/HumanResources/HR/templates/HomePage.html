@@ -1,8 +1,18 @@
 {% include 'navbar.html' %}
 {% load static %}
-<!DOCTYPE html>
+
+<link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
+
+
+
+{% block content %}
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang = "en">
-    <!-- <head>
+    <head>
         <meta charset="UTF-8">
         <title>
             Home Page
@@ -19,8 +29,8 @@
             <a href="searchEmp.html">SEARCH EMPLOYEE</a>
             <a href="VR.html">VACATION REQUESTS</a>
             <font class="logo"><b>FCAI</b></font>
-        </div>
-         -->
+        </div> -->
+        
         <br /><br /><br /><br /><br /><br /><br /><br /><br />           
 	    <h1>WELCOME TO FCAI<br>HUMAN RESOURCES SYSTEM
         </h1>
@@ -33,6 +43,4 @@
     </body>
 
 </html>
-
-{% block content%}
 {% endblock content %}

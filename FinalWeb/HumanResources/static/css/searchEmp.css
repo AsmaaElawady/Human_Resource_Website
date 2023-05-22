@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    background-image: url("#HP2v3.png");
+    background-image: url("HP2v3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -9,33 +9,33 @@ body {
 
 /* Add a black background color to the top navigation */
 
-.navBar{
-    background-color: #ffffff;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-}
-.navBar a{
-    float: left;
-    color: #2f56d6;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 19px;
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
+/*.navBar{*/
+/*    background-color: #ffffff;*/
+/*    overflow: hidden;*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*    height: 50px;*/
+/*}*/
+/*.navBar a{*/
+/*    float: left;*/
+/*    color: #2f56d6;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    font-size: 19px;*/
+/*    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/
+/*}*/
 
-/* Change the color of links on hover */
-.navBar a:hover {
-    background-color: #ddd;
-    color: black;
-}
+/*!* Change the color of links on hover *!*/
+/*.navBar a:hover {*/
+/*    background-color: #ddd;*/
+/*    color: black;*/
+/*}*/
 
-/* Add a color to the active/current link */
-.navBar a.active {
-    background-color: #458fe8;
-    color: white;
-}
+/*!* Add a color to the active/current link *!*/
+/*.navBar a.active {*/
+/*    background-color: #458fe8;*/
+/*    color: white;*/
+/*}*/
 
 
 .logo{

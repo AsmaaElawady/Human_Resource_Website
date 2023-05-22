@@ -1,31 +1,35 @@
 {% include 'navbar.html' %}
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
+
 {% block content %}
-<form action="">
-    <table border="1">
-    {% for x in mymembers %}
-    <tr>
-    <td>{{ x.EmployeeID }}</td>
-    <td>{{ x.EmployeeName }}</td>
-    <td>{{ x.email }}</td>
-    <td>{{ x.phone }}</td>
-    <td>{{ x.Addres }}</td>
-    <td>{{ x.Salary }}</td>
-    <td>{{ x.NumberVacation }}</td>
-    <td>{{ x.NumberApprovedVacation }}</td>
-    <td>{{ x.Date }}</td>
-    <td>{{ x.Gender }}</td>
-    <td>{{ x.Status }}</td>
-    <td>{{ x.MARITALSTATUE }}</td>
-    <td><a href="update/{{ x.EmployeeID }}">Update</a></td>
-    <td><a href="delete/{{ x.EmployeeID }}">Delete</a></td>
-    </tr>
-    {% endfor %}    
-    </table>
-    <p>
-        <a href="add/">Add Employee</a>
-    </p>
-</form>
+
+<table border="1">
+{% for x in mymembers %}
+<tr>
+<td>{{ x.EmployeeID }}</td>
+<td>{{ x.EmployeeName }}</td>
+<td>{{ x.email }}</td>
+<td>{{ x.phone }}</td>
+<td>{{ x.Addres }}</td>
+<td>{{ x.Salary }}</td>
+<td>{{ x.NumberVacation }}</td>
+<td>{{ x.NumberApprovedVacation }}</td>
+<td>{{ x.Date }}</td>
+<td>{{ x.Gender }}</td>
+<td>{{ x.Status }}</td>
+<td>{{ x.MARITALSTATUE }}</td>
+<td><a href="update/{{ x.EmployeeID }}">Update</a></td>
+<td><a href="delete/{{ x.EmployeeID }}">Delete</a></td>
+</tr>
+{% endfor %}    
+</table>
+
+<p>
+    <a href="add/">Add Employee</a>
+</p>
+
+
 
 {% endblock content %}

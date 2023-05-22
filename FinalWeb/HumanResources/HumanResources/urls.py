@@ -24,7 +24,7 @@ urlpatterns = [
     path('update/',include('HR.urls')),
     # path('updateEmp/',include('HR.urls')),
     path('admin/', admin.site.urls),
-     path('',views.HomePage,name='HomePage'),
+    path('',views.HomePage,name='HomePage'),
     path('phase1',views.phase1,name='phase1'),
     path('table',views.table,name='table'),
 ]
