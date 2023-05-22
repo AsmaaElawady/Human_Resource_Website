@@ -82,6 +82,10 @@ def Table(request):
   return HttpResponse(template.render(context, request))
 
 
+def updateEmployee(request):
+  return render(request,"updateEmployee.html")
+
+
 
 
 
@@ -91,12 +95,12 @@ def Table(request):
 
 # def update(request):
 #     mymembers = RegisterForm.objects.all().values()
-#     template = loader.get_template('update.html')
+#     template = loader.get_template('updateEmployee.html')
 #     context = {
 #       'mymembers': mymembers,
 #     }
 #     return HttpResponse(template.render(context, request))
-#   #  template = loader.get_template('update.html')
+#   #  template = loader.get_template('updateEmployee.html')
 #   #  return HttpResponse(template.render({}, request))
 
 # def updateEmp(request ):
