@@ -5,9 +5,9 @@
 <body>
     <!-- Navigation bar -->
     <div class="navBar">
-        <a class="active" href="HomePage.html">Home</a>
-        <a href="{% static 'html/phase1.html'%}">ADD EMPLOYEE</a>
-        <a href="projectPhase1.html">UPDATE EMPLOYEE</a>
+        <a class="active" href="{% url 'HomePage' %}">Home</a>
+        <a href="{% url 'phase1' %}">ADD EMPLOYEE</a>
+        <a href="{% url 'table' %}">UPDATE EMPLOYEE</a>
         <a href="searchEmp.html">SEARCH EMPLOYEE</a>
         <a href="VR.html">VACATION REQUESTS</a>
         <font class="logo"><b>FCAI</b></font>

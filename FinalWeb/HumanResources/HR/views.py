@@ -16,13 +16,7 @@ from django.shortcuts import render
 
 
 def index(request):
-  mymembers = RegisterForm.objects.all().values()
-  # template = loader.get_template('phase1.html')
-  template = loader.get_template('table.html')
-  context = {
-    'mymembers': mymembers,
-  }
-  return HttpResponse(template.render(context, request))
+  return render(request, 'HomePage.html')
   
   
 def add(request):
@@ -74,7 +68,22 @@ def updaterecord(request, EmployeeID):
   return HttpResponseRedirect(reverse('index'))
 
 
+def HomePage(request):
+  return render(request, 'HomePage.html')
 
+
+def phase1(request):
+  return render(request, 'phase1.html')
+
+
+def table(request):
+  mymembers = RegisterForm.objects.all().values()
+  # template = loader.get_template('phase1.html')
+  template = loader.get_template('table.html')
+  context = {
+    'mymembers': mymembers,
+  }
+  return HttpResponse(template.render(context, request))
 
 
 
