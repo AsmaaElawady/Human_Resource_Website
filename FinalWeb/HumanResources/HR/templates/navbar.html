@@ -7,10 +7,10 @@
 
     <!-- Navigation bar -->
     <div class="navBar">
-        <a class="active" href="{% static "HomePage.html" %}">Home</a>
-        <a href= "{% static 'phase1.html'%}" >Add Employee</a>
+        <a class="active" href= HomePage.html" >Home</a>
+        <a href= "{% url 'add'%}" >Add Employee</a>
         <a href= "projectPhase1.html">Update Employee</a>
-        <a href= "searchEmp.html" >Search Employee</a>
+        <a href="{% url 'searchEmployee' %}" >Search Employee</a>
         <a href="VR.html">Vacation Requests</a>
         <font class="logo"><b>FCAI</b></font>
     </div>
