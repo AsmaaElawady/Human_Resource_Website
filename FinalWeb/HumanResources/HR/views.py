@@ -4,6 +4,8 @@ from django.urls import reverse
 from .models import RegisterForm 
 # from .models import Upform 
 from django.shortcuts import render
+from django.views.decorators.csrf  import csrf_exempt
+
 
 # def home(request):
 #   if 1==1:
@@ -102,19 +104,25 @@ def VRDisplay(request ):
 def searchEmployee(request):
   return render(request,'searchEmp.html')
 
+@csrf_exempt
 def getEmployee(request):
 
-  name = request.POST.get("eName")
-  employees = RegisterForm.objects.filter(EmployeeName__icontains = name)
-  results_html = ""
+    name = request.POST['empName']
 
-  for employee in employees:
-    results_html += f"<p>{employee.EmployeeName} {employee.EmployeeID}</p>"
-
-  return render(request,"searchEmp.html",results_html)
+    employees = RegisterForm.objects.filter(EmployeeName__icontains = name)
+    results_html = []
 
 
+    for employee in employees:
+      results_html.append(employee.EmployeeName +" "+ employee.EmployeeID)
 
+      context = {"results":results_html}
+
+    return render(request,'output.html',context)
+
+
+def outPut(request):
+  return render(request,"output.html")
 
 
 

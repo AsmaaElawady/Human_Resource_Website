@@ -12,6 +12,7 @@ urlpatterns = [
     path('searchEmployee/',views.searchEmployee,name = 'searchEmployee'),
     path('getEmployee/',views.getEmployee, name = 'getEmployee'),
     path('VR/',views.VRDisplay,name='VRDisplay'),
+    path('outPut/',views.outPut, name = 'outPut'),
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),
     # # path('delete/<event_id>', views.delete, name='delete'),
