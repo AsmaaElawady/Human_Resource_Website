@@ -5,13 +5,15 @@
 {% block content%}
 
 
+<body>
     <!-- Navigation bar -->
     <div class="navBar">
-        <a class="active" href= "{% url 'table' %}" >Home</a>
-        <a href= "{% url 'add'%}" >Add Employee</a>
-        <a href= "{% url 'updateEmployee'%}">Update Employee</a>
+        <a class="active" href="{% url 'HomePage' %}">Home</a>
+        <a href="{% url 'phase1' %}">ADD EMPLOYEE</a>
+        <a href="{% url 'table' %}">UPDATE EMPLOYEE</a>
         <a href="{% url 'searchEmployee' %}" >Search Employee</a>
         <a href="{% url "VRDisplay" %}">Vacation Requests</a>
+
         <font class="logo"><b>FCAI</b></font>
     </div>
     <br><br><br><br>
