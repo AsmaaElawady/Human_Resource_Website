@@ -39,7 +39,7 @@ def addrecord(request):
 
   member = RegisterForm(EmployeeID=EmployeeID,EmployeeName=EmployeeName,email=email,phone=phone,Addres=Addres,Salary=Salary,NumberVacation=NumberVacation,NumberApprovedVacation=NumberApprovedVacation,Date=Date,Gender=Gender,Status=Status,MARITALSTATUE=MARITALSTATUE )
   member.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('phase1'))
 
 
 def delete(request, EmployeeID):
@@ -60,12 +60,23 @@ def update(request, EmployeeID):
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
   EmployeeID = request.POST['EmployeeID']
+  email = request.POST['email']
+  phone = request.POST['phone']
+  Addres = request.POST['Addres']
+  Salary = request.POST['Salary']
+  NumberVacation = request.POST['NumberVacation']
+  NumberApprovedVacation = request.POST['NumberApprovedVacation']
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
   member.EmployeeName = EmployeeName
   member.EmployeeID = EmployeeID
+  member.email = email
+  member.phone = phone
+  member.Addres = Addres
+  member.Salary = Salary
+  member.NumberVacation = NumberVacation
+  member.NumberApprovedVacation = NumberApprovedVacation
   member.save()
   return HttpResponseRedirect(reverse('index'))
-
 
 def phase1(request):
   return render(request, 'phase1.html')
