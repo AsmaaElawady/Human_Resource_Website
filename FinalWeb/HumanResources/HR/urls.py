@@ -3,7 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    # path('', views.home, name='nhome'),
     path('', views.index, name='index'),
     path('add/', views.add, name='add'),
     path('add/addrecord/', views.addrecord, name='addrecord'),
@@ -12,8 +11,6 @@ urlpatterns = [
     path('update/updaterecord/<int:EmployeeID>', views.updaterecord, name='updaterecord'),
     path('searchEmployee/',views.searchEmployee,name = 'searchEmployee'),
     path('getEmployee/',views.getEmployee, name = 'getEmployee'),
-    path('table/', views.Table,name = "table"),
-    path('updateEmployee/', views.updateEmployee, name = 'updateEmployee'),
     path('VR/',views.VRDisplay,name='VRDisplay'),
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),

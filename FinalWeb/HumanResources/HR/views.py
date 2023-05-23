@@ -81,25 +81,15 @@ def table(request):
   return HttpResponse(template.render(context, request))
 
 
-def updateEmployee(request):
-  return render(request,"updateEmployee.html")
-
+def HomePage(request):
+  return render(request, 'HomePage.html')
 
 def VRDisplay(request ):
     template = loader.get_template('VR.html')
     return HttpResponse(template.render({}, request))
 
-
-
-
-
-
-
-
-
-
-
-
+def searchEmployee(request):
+  return render(request,'searchEmp.html')
 
 def getEmployee(request):
 

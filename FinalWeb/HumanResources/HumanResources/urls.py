@@ -20,11 +20,10 @@ from HR import views
 
 urlpatterns = [
     path('', include('HR.urls')),
-    
+    path('', views.HomePage, name='HomePage'),
     path('update/',include('HR.urls')),
     # path('updateEmp/',include('HR.urls')),
     path('admin/', admin.site.urls),
-    path('',views.HomePage,name='HomePage'),
     path('phase1',views.phase1,name='phase1'),
     path('table',views.table,name='table'),
 ]
