@@ -4,13 +4,14 @@ from . import views
 
 urlpatterns = [
     # path('', views.home, name='nhome'),
-    path('', views.index, name='homePage'),
+    path('', views.index, name='table'),
     path('add/', views.add, name='add'),
     path('add/addrecord/', views.addrecord, name='addrecord'),
     path('delete/<int:EmployeeID>', views.delete, name='delete'),
     path('update/<int:EmployeeID>', views.update, name='update'),
     path('update/updaterecord/<int:EmployeeID>', views.updaterecord, name='updaterecord'),
     path('searchEmployee/',views.searchEmployee,name = 'searchEmployee'),
+    path('getEmployee/',views.getEmployee, name = 'getEmployee'),
     path('table/', views.Table,name = "table"),
     path('updateEmployee/', views.updateEmployee, name = 'updateEmployee'),
     path('VR/',views.VRDisplay,name='VRDisplay'),

@@ -6,6 +6,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (ahlan)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jquery-3.6.0" level="application" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

@@ -94,6 +94,31 @@ def VRDisplay(request ):
 
 
 
+
+
+
+
+
+
+
+
+def getEmployee(request):
+
+  name = request.POST.get("eName")
+  employees = RegisterForm.objects.filter(EmployeeName__icontains = name)
+  results_html = ""
+
+  for employee in employees:
+    results_html += f"<p>{employee.EmployeeName} {employee.EmployeeID}</p>"
+
+  return render(request,"searchEmp.html",results_html)
+
+
+
+
+
+
+
 # #function to render the update page
 
 # def update(request):
