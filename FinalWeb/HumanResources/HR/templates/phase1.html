@@ -2,7 +2,7 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
-
+<script type="text/javascript" src="{% static 'js/addEmployee.js' %}"></script>
 
 
 {% block content %}
@@ -12,7 +12,7 @@
 <!-- <img src="Eventbrite-banner.png" class="here_icon"><br> -->
 <div class="sign">
     <div id="R">
-        <form id="demo" onsubmit="return validateForm() , signup()"  method="post" action="addrecord/">
+        <form id="demo" onsubmit="return validateForm() "  method="post" action="addrecord/">
             {% csrf_token %}
             <br>
             <div>

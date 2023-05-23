@@ -29,41 +29,41 @@ function validateForm() {
   }
 }
 
-function signup(e) {
-  event.preventDefault();
-  var EmployeeName = document.getElementById("EmployeeName").value;
-  var EmployeeID = document.getElementById("EmployeeID").value;
-  var email = document.getElementById("email").value;
-  var Phonenumber = document.getElementById("Phonenumber").value;
-  var Addres = document.getElementById("Addres").value;
-  var Salary = document.getElementById("Salary").value;
-  var NumberVacation = document.getElementById("a1").value;
-  var NumberApprovedVacation = document.getElementById("a2").value;
-  var Date = document.getElementById("Date").value;
-  var Gender = document.querySelector("input[name=gender]:checked").value;
-  var Status = document.querySelector("input[name=statue]:checked").value;
-  var MARITALSTATUE = document.querySelector(
-    "input[name=MaritalStatue]:checked"
-  ).value;
+// function signup(e) {
+//   event.preventDefault();
+//   var EmployeeName = document.getElementById("EmployeeName").value;
+//   var EmployeeID = document.getElementById("EmployeeID").value;
+//   var email = document.getElementById("email").value;
+//   var Phonenumber = document.getElementById("Phonenumber").value;
+//   var Addres = document.getElementById("Addres").value;
+//   var Salary = document.getElementById("Salary").value;
+//   var NumberVacation = document.getElementById("a1").value;
+//   var NumberApprovedVacation = document.getElementById("a2").value;
+//   var Date = document.getElementById("Date").value;
+//   var Gender = document.querySelector("input[name=gender]:checked").value;
+//   var Status = document.querySelector("input[name=statue]:checked").value;
+//   var MARITALSTATUE = document.querySelector(
+//     "input[name=MaritalStatue]:checked"
+//   ).value;
 
 
-  var user = {
-    EmployeeName: EmployeeName,
-    EmployeeID: EmployeeID,
-    email: email,
-    Phonenumber: Phonenumber,
-    Addres: Addres,
-    Salary: Salary,
-    a1: NumberVacation,
-    a2: NumberApprovedVacation,
-    Date: Date,
-    gender: Gender,
-    statue: Status,
-    MaritalStatue: MARITALSTATUE,
+//   var user = {
+//     EmployeeName: EmployeeName,
+//     EmployeeID: EmployeeID,
+//     email: email,
+//     Phonenumber: Phonenumber,
+//     Addres: Addres,
+//     Salary: Salary,
+//     a1: NumberVacation,
+//     a2: NumberApprovedVacation,
+//     Date: Date,
+//     gender: Gender,
+//     statue: Status,
+//     MaritalStatue: MARITALSTATUE,
 
-  };
+//   };
 
-  var json = JSON.stringify(user);
-  localStorage.setItem(EmployeeName, json);
-  console.log("user added");
-}
+//   var json = JSON.stringify(user);
+//   localStorage.setItem(EmployeeName, json);
+//   console.log("user added");
+// }
