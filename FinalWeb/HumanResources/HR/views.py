@@ -67,14 +67,6 @@ def vacationFormFields(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
-# def VFlink(request, VFID):
-#   mymember = VacationForm.objects.get(VFID=VFID)
-#   template = loader.get_template('vacationForm.html')
-#   context = {
-#     'mymember': mymember,
-#   }
-#   return HttpResponse(template.render(context, request))
-
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -119,15 +111,6 @@ def table(request):
   }
   return HttpResponse(template.render(context, request))
 
-def VFdata(request):
-  mymembers = VacationForm.objects.all().values()
-  # template = loader.get_template('phase1.html')
-  template = loader.get_template('vacationForm.html')
-  context = {
-    'mymembers': mymembers,
-  }
-  return HttpResponse(template.render(context, request))
-
 
 def HomePage(request):
   return render(request, 'HomePage.html')
@@ -136,9 +119,10 @@ def VRDisplay(request ):
     template = loader.get_template('VR.html')
     return HttpResponse(template.render({}, request))
 
-def VFDisplay(request ):
-    template = loader.get_template('vacationForm.html')
-    return HttpResponse(template.render({}, request))
+def VFDisplay(request):
+    # template = loader.get_template('vacationForm.html')
+    # return HttpResponse(template.render({}, request))
+    return render(request,'vacationForm.html')
 
 def searchEmployee(request):
   return render(request,'searchEmp.html')

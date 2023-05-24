@@ -13,11 +13,11 @@ urlpatterns = [
     path('getEmployee/',views.getEmployee, name = 'getEmployee'),
     path('VR/',views.VRDisplay,name='VRDisplay'),
     path('outPut/',views.outPut, name = 'outPut'),
-    # path('getEmployee/vacationForm.html', views.VFDisplay, name = 'VFL'),
+    path('getEmployee/vacationForm.html', views.VFDisplay, name = 'VFL'),
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),
     # # path('delete/<event_id>', views.delete, name='delete'),
-    path('vacationFormFields/<int:EmployeeID>', views.vacationFormFields, name='vacationFormFields'),
-    path('vacationFormFields/fillVacationFormFields/<int:EmployeeID>', views.fillVacationFormFields, name='fillVacationFormFields'),
+    path('getEmployee/vacationFormFields/<int:EmployeeID>', views.vacationFormFields, name='vacationFormFields'),
+    path('getEmployee/vacationFormFields/fillVacationFormFields/<int:EmployeeID>', views.fillVacationFormFields, name='fillVacationFormFields'),
 ]
 
