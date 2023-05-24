@@ -59,6 +59,14 @@ def update(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
+# def VFlink(request, VFID):
+#   mymember = VacationForm.objects.get(VFID=VFID)
+#   template = loader.get_template('vacationForm.html')
+#   context = {
+#     'mymember': mymember,
+#   }
+#   return HttpResponse(template.render(context, request))
+
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -89,6 +97,15 @@ def table(request):
   mymembers = RegisterForm.objects.all().values()
   # template = loader.get_template('phase1.html')
   template = loader.get_template('table.html')
+  context = {
+    'mymembers': mymembers,
+  }
+  return HttpResponse(template.render(context, request))
+
+def VFdata(request):
+  mymembers = VacationForm.objects.all().values()
+  # template = loader.get_template('phase1.html')
+  template = loader.get_template('vacationForm.html')
   context = {
     'mymembers': mymembers,
   }
