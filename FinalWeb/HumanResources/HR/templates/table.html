@@ -2,7 +2,12 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
-
+<style>
+    body {
+        background-image: url("{% static 'image/HP2v3.png' %}");
+    }
+</style>  
+<body>
 {% block content %}
 
 <table border="1">
@@ -29,7 +34,7 @@
 <p>
     <a href="add/">Add Employee</a>
 </p>
-
+</body>
 
 
 {% endblock content %}
