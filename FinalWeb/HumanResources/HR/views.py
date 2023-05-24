@@ -59,6 +59,14 @@ def update(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
+def vacationFormFields(request, EmployeeID):
+  mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
+  template = loader.get_template('output.html')
+  context = {
+    'mymember': mymember,
+  }
+  return HttpResponse(template.render(context, request))
+
 # def VFlink(request, VFID):
 #   mymember = VacationForm.objects.get(VFID=VFID)
 #   template = loader.get_template('vacationForm.html')
@@ -86,6 +94,15 @@ def updaterecord(request, EmployeeID):
   member.Salary = Salary
   member.NumberVacation = NumberVacation
   member.NumberApprovedVacation = NumberApprovedVacation
+  member.save()
+  return HttpResponseRedirect(reverse('index'))
+
+def fillVacationFormFields(request, EmployeeID):
+  EmployeeName = request.POST['EmployeeName']
+  EmployeeID = request.POST['EmployeeID']
+  member = RegisterForm.objects.get(EmployeeID=EmployeeID)
+  member.EmployeeName = EmployeeName
+  member.EmployeeID = EmployeeID
   member.save()
   return HttpResponseRedirect(reverse('index'))
 

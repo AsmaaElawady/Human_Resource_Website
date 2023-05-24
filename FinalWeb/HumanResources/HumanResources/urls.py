@@ -26,7 +26,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('phase1',views.phase1,name='phase1'),
     path('table',views.table,name='table'),
-    path('vacationForm/',views.VFdata,name='VF'),
 ]
 
 
