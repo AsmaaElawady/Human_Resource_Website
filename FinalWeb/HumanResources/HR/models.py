@@ -27,12 +27,12 @@ class RegisterForm(models.Model):
     MARITALSTATUE = models.CharField(max_length=8,choices=ms)
 
 class VacationForm(models.Model):
-    name = models.CharField(max_length = 50)
-    ID = models.CharField(max_length = 50, primary_key = True)
-    fromDate = models.DateField()
-    toDate = models.DateField()
-    reason = models.TextField()
-    status = models.CharField(max_length = 15)
+    VFName = models.CharField(max_length = 50)
+    VFID = models.CharField(max_length = 50, primary_key = True)
+    VFFromDate = models.DateField()
+    VFToDate = models.DateField()
+    VFReason = models.TextField()
+    VFStatus = models.CharField(max_length = 15)
 
 
 # class Upform(models.Model):
