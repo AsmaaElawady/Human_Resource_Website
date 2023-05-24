@@ -1,0 +1,63 @@
+{% include 'navbar.html' %}
+{% load static %}
+
+<link rel = "stylesheet" href = "{% static 'css/vacationForm.css' %}">
+<script type="text/javascript" src="{% static 'js/vacationForm.js' %}"></script>
+
+{% block content%}
+<!DOCTYPE  html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Vacation Form</title>
+        <meta name = "describtion" content=""/>
+    </head>
+    <body id="bodyy">
+        <div>
+            <h1> Fill the Vacation Form </h1>
+            <form class="formData" method = "POST">   
+                {% csrf_token %}
+                <br><br>
+                <div>
+                    <label> Name </label>
+                    <input type = "text" id = "VEmpName"  placeholder="Name"
+                    required name = "VFName"/>
+                </div>
+                <div>
+                    <label> ID </label>
+                    <input type = "text" id = "empID"  placeholder="ID"
+                    required name = "VFID"/>
+                </div>
+                <div>
+                    <label> From Date </label>
+                    <input type = "date" id = "fromDate" name = "VFFromDate"/>
+                </div>
+                <div>
+                    <label> To Date </label>
+                    <input type = "date" id = "toDate" name = "VFToDate"/>
+                </div>
+                <div>
+                    <label> Reason </label>
+                    <input type = "text" id = "VReason"
+                    placeholder="The Reason Is ..." name = "VFReason"/>
+                </div>
+                <div>
+                    <label> Status </label>
+                    <input type = "text" id="Vstatus" value="submitted"
+                    name = "VFStatus"/>
+                </div>
+                <div id = error></div>
+                <br>
+                <div>
+                    <br>
+                <input type = "submit" id = "sbmtbtn"/>
+                </div>
+        </form>
+        <br>
+    </div>
+    <script src = "vacationForm.js"></script>
+
+    </body>
+</html>
+
+{% endblock content %}

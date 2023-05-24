@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
+from .models import VacationForm
 # from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
@@ -125,8 +126,21 @@ def outPut(request):
   return render(request,"output.html")
 
 
+def vacationForm(request):
+  VFName = request.POST['VFName']
+  VFID = request.POST['VFID']
+  VFFromDate = request.POST['VFFromDate']
+  VFToDate = request.POST['VFToDate']
+  VFReason = request.POST['VFReason']
+  VFStatus = request.POST['VFStatus']
 
+  VFData = VacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
+                      , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
+  VFData.save()
+  return render(request,'vacationForm.html')
 
+def VF(request):
+  return render(request, 'vacationForm.html')
 
 # #function to render the update page
 
