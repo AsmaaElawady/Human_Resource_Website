@@ -1,6 +1,7 @@
-{% for i in results %}
-      {% comment %} <li>{{i}}</li> {% endcomment %}
-      <a href="vacationForm.html"><li>{{i}}</li></a>
+
+
+{% for key, value in results.items %}
+    <p>{{ key }} {{ "    " }} <a href="vacationForm.html">{{ value }}</a></p>
 {% endfor %}
 
 
