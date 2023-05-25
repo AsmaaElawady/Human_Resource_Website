@@ -126,11 +126,11 @@ def outPut(request):
 
 def addVacationForm(request):
   VFName = request.POST.get('VFName')
-  VFID = request.POST('VFID')
+  VFID = request.POST.get('VFID')
   VFFromDate = request.POST('VFFromDate')
-  VFToDate = request.POST('VFToDate')
-  VFReason = request.POST('VFReason')
-  VFStatus = request.POST('VFStatus')
+  VFToDate = request.POST.get('VFToDate')
+  VFReason = request.POST.get('VFReason')
+  VFStatus = request.POST.get('VFStatus')
   VFData = VacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
