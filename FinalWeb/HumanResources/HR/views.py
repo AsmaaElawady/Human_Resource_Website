@@ -115,9 +115,9 @@ def table(request):
 def HomePage(request):
   return render(request, 'HomePage.html')
 
-def VRDisplay(request ):
-    template = loader.get_template('VR.html')
-    return HttpResponse(template.render({}, request))
+def VRDisplay(request):
+    employees = VacationForm.objects.values('VFName')
+    return render(request, 'VR.html', {'employees': employees})    
 
 def VFDisplay(request):
     # template = loader.get_template('vacationForm.html')
@@ -169,7 +169,6 @@ def VF(request):
   return render(request, 'vacationForm.html')
 
 # #function to render the update page
-
 # def update(request):
 #     mymembers = RegisterForm.objects.all().values()
 #     template = loader.get_template('update.html')
