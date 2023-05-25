@@ -3,20 +3,9 @@ from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
 from .models import VacationForm
-# from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
-
-
-# def home(request):
-#   if 1==1:
-#     name=request.POST.get('EmployeeName')
-#     return HttpResponse(name)
-#   return render(request, 'phase1.html',{'mysorm':RegisterForm})
-  
-  
-#     # return render(request, 'home.html')
-
+# from .models import Upform 
 
 def index(request):
   return render(request, 'HomePage.html')
@@ -24,6 +13,7 @@ def index(request):
 def add(request):
   template = loader.get_template('phase1.html')
   return HttpResponse(template.render({}, request))
+
 
 
 def addrecord(request):
@@ -44,12 +34,10 @@ def addrecord(request):
   member.save()
   return HttpResponseRedirect(reverse('phase1'))
 
-
 def delete(request, EmployeeID):
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
   member.delete()
   return HttpResponseRedirect(reverse('index'))
-
 
 def update(request, EmployeeID):
   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
@@ -58,15 +46,6 @@ def update(request, EmployeeID):
     'mymember': mymember,
   }
   return HttpResponse(template.render(context, request))
-
-# def vacationFormFields(request, EmployeeID):
-#   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
-#   template = loader.get_template('output.html')
-#   context = {
-#     'mymember': mymember,
-#   }
-#   return HttpResponse(template.render(context, request))
-
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -88,15 +67,6 @@ def updaterecord(request, EmployeeID):
   member.NumberApprovedVacation = NumberApprovedVacation
   member.save()
   return HttpResponseRedirect(reverse('index'))
-
-# def fillVacationFormFields(request, EmployeeID):
-#   EmployeeName = request.POST['EmployeeName']
-#   EmployeeID = request.POST['EmployeeID']
-#   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
-#   member.EmployeeName = EmployeeName
-#   member.EmployeeID = EmployeeID
-#   member.save()
-#   return HttpResponseRedirect(reverse('index'))
 
 def phase1(request):
   return render(request, 'phase1.html')
@@ -121,6 +91,10 @@ def VRDisplay(request):
 
 def VFDisplay(request):
     return render(request,'vacationForm.html')
+
+def addVF(request):
+  template = loader.get_template('vacationForm.html')
+  return HttpResponse(template.render({}, request))
 
 def searchEmployee(request):
   return render(request,'searchEmp.html')
@@ -150,18 +124,17 @@ def outPut(request):
   return render(request,"output.html")
 
 
-def vacationForm(request):
-  VFName = request.POST['VFName']
-  VFID = request.POST['VFID']
-  VFFromDate = request.POST['VFFromDate']
-  VFToDate = request.POST['VFToDate']
-  VFReason = request.POST['VFReason']
-  VFStatus = request.POST['VFStatus']
-
+def addVacationForm(request):
+  VFName = request.POST.get('VFName')
+  VFID = request.POST('VFID')
+  VFFromDate = request.POST('VFFromDate')
+  VFToDate = request.POST('VFToDate')
+  VFReason = request.POST('VFReason')
+  VFStatus = request.POST('VFStatus')
   VFData = VacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
-  return render(request,'vacationForm.html')
+  return HttpResponseRedirect(reverse('VFDisplay'))
 
 # def VF(request):
 #   return render(request, 'vacationForm.html')
@@ -194,3 +167,32 @@ def vacationForm(request):
 # #     member = RegisterForm.objects.get(pk=event_id)
 # #     member.delete()
 # #     return HttpResponseRedirect(reverse('index'))
+
+# def fillVacationFormFields(request, EmployeeID):
+#   EmployeeName = request.POST['EmployeeName']
+#   EmployeeID = request.POST['EmployeeID']
+#   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
+#   member.EmployeeName = EmployeeName
+#   member.EmployeeID = EmployeeID
+#   member.save()
+#   return HttpResponseRedirect(reverse('index'))
+
+# def vacationFormFields(request, EmployeeID):
+#   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
+#   template = loader.get_template('output.html')
+#   context = {
+#     'mymember': mymember,
+#   }
+#   return HttpResponse(template.render(context, request))
+
+
+
+# def home(request):
+#   if 1==1:
+#     name=request.POST.get('EmployeeName')
+#     return HttpResponse(name)
+#   return render(request, 'phase1.html',{'mysorm':RegisterForm})
+  
+  
+#     # return render(request, 'home.html')
+
