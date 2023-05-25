@@ -59,13 +59,13 @@ def update(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
-def vacationFormFields(request, EmployeeID):
-  mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
-  template = loader.get_template('output.html')
-  context = {
-    'mymember': mymember,
-  }
-  return HttpResponse(template.render(context, request))
+# def vacationFormFields(request, EmployeeID):
+#   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
+#   template = loader.get_template('output.html')
+#   context = {
+#     'mymember': mymember,
+#   }
+#   return HttpResponse(template.render(context, request))
 
 
 def updaterecord(request, EmployeeID):
@@ -89,14 +89,14 @@ def updaterecord(request, EmployeeID):
   member.save()
   return HttpResponseRedirect(reverse('index'))
 
-def fillVacationFormFields(request, EmployeeID):
-  EmployeeName = request.POST['EmployeeName']
-  EmployeeID = request.POST['EmployeeID']
-  member = RegisterForm.objects.get(EmployeeID=EmployeeID)
-  member.EmployeeName = EmployeeName
-  member.EmployeeID = EmployeeID
-  member.save()
-  return HttpResponseRedirect(reverse('index'))
+# def fillVacationFormFields(request, EmployeeID):
+#   EmployeeName = request.POST['EmployeeName']
+#   EmployeeID = request.POST['EmployeeID']
+#   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
+#   member.EmployeeName = EmployeeName
+#   member.EmployeeID = EmployeeID
+#   member.save()
+#   return HttpResponseRedirect(reverse('index'))
 
 def phase1(request):
   return render(request, 'phase1.html')
@@ -120,8 +120,6 @@ def VRDisplay(request):
     return render(request, 'VR.html', {'employees': employees})    
 
 def VFDisplay(request):
-    # template = loader.get_template('vacationForm.html')
-    # return HttpResponse(template.render({}, request))
     return render(request,'vacationForm.html')
 
 def searchEmployee(request):
@@ -165,8 +163,8 @@ def vacationForm(request):
   VFData.save()
   return render(request,'vacationForm.html')
 
-def VF(request):
-  return render(request, 'vacationForm.html')
+# def VF(request):
+#   return render(request, 'vacationForm.html')
 
 # #function to render the update page
 # def update(request):

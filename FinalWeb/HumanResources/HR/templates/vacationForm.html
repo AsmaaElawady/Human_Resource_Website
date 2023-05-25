@@ -19,17 +19,17 @@
     <body id="bodyy">
         <div>
             <h1> Fill the Vacation Form </h1>
-            <form class="formData" method = "POST"  action="fillVacationFormFields/{{ mymember.EmployeeID }}">   
+            <form class="formData" method = "POST">   
                 {% csrf_token %}
                 <br><br>
                 <div>
                     <label> Name </label>
-                    <input type = "text" id = "VEmpName"  placeholder="Name" value="{{ mymember.EmployeeName }}"
+                    <input type = "text" id = "VEmpName"  placeholder="Name"
                     required name = "VFName"/>
                 </div>
                 <div>
                     <label> ID </label>
-                    <input type = "text" id = "empID"  placeholder="ID" value="{{ mymember.EmployeeID }}"
+                    <input type = "text" id = "empID"  placeholder="ID"
                     required name = "VFID"/>
                 </div>
                 <div>
