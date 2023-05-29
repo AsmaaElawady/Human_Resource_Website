@@ -26,9 +26,12 @@ class RegisterForm(models.Model):
     Status = models.CharField(max_length=8,choices=stats)
     MARITALSTATUE = models.CharField(max_length=8,choices=ms)
 
+
+
+
 class VacationForm(models.Model):
     VFName = models.CharField(max_length = 50)
-    VFID = models.CharField(max_length = 50)
+    id = models.CharField(max_length = 50, primary_key=True)
     VFFromDate = models.DateField()
     VFToDate = models.DateField()
     VFReason = models.TextField()

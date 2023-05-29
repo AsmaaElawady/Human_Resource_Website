@@ -107,7 +107,7 @@ def HomePage(request):
 
 def VRDisplay(request):
     employees = VacationForm.objects.values('VFName')
-    return render(request, 'VR.html', {'employees': employees})    
+    return render(request, 'VR.html', {'employees': employees})
 
 def VFDisplay(request):
     # template = loader.get_template('vacationForm.html')
@@ -153,7 +153,7 @@ def addVacationForm(request):
   VFToDate = request.POST.get('VFToDate')
   VFReason = request.POST.get('VFReason')
   VFStatus = request.POST.get('VFStatus')
-  VFData = VacationForm(VFName = VFName, VFID = ID, VFFromDate = VFFromDate
+  VFData = VacationForm(VFName = VFName, id = ID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
   return HttpResponseRedirect(reverse('VFDisplay'))
