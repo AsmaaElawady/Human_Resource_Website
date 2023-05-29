@@ -3,9 +3,10 @@ from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
 from .models import VacationForm
+# from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
-# from .models import Upform 
+# from .models import Upform
 
 def index(request):
   return render(request, 'HomePage.html')
@@ -13,7 +14,6 @@ def index(request):
 def add(request):
   template = loader.get_template('phase1.html')
   return HttpResponse(template.render({}, request))
-
 
 
 def addrecord(request):
@@ -34,10 +34,12 @@ def addrecord(request):
   member.save()
   return HttpResponseRedirect(reverse('phase1'))
 
+
 def delete(request, EmployeeID):
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
   member.delete()
   return HttpResponseRedirect(reverse('index'))
+
 
 def update(request, EmployeeID):
   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
@@ -46,6 +48,15 @@ def update(request, EmployeeID):
     'mymember': mymember,
   }
   return HttpResponse(template.render(context, request))
+
+def vacationFormFields(request, EmployeeID):
+  mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
+  template = loader.get_template('searchEmpOutput.html')
+  context = {
+    'mymember': mymember,
+  }
+  return HttpResponse(template.render(context, request))
+
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -65,6 +76,15 @@ def updaterecord(request, EmployeeID):
   member.Salary = Salary
   member.NumberVacation = NumberVacation
   member.NumberApprovedVacation = NumberApprovedVacation
+  member.save()
+  return HttpResponseRedirect(reverse('index'))
+
+def fillVacationFormFields(request, EmployeeID):
+  EmployeeName = request.POST['EmployeeName']
+  EmployeeID = request.POST['EmployeeID']
+  member = RegisterForm.objects.get(EmployeeID=EmployeeID)
+  member.EmployeeName = EmployeeName
+  member.EmployeeID = EmployeeID
   member.save()
   return HttpResponseRedirect(reverse('index'))
 
@@ -90,6 +110,8 @@ def VRDisplay(request):
     return render(request, 'VR.html', {'employees': employees})    
 
 def VFDisplay(request):
+    # template = loader.get_template('vacationForm.html')
+    # return HttpResponse(template.render({}, request))
     return render(request,'vacationForm.html')
 
 def addVF(request):
@@ -117,21 +139,21 @@ def getEmployee(request):
 
     context = {"results":results_html}
 
-    return render(request,'output.html',context)
+    return render(request,'searchEmpOutput.html',context)
 
 
 def outPut(request):
-  return render(request,"output.html")
+  return render(request,"searchEmpOutput.html")
 
 
 def addVacationForm(request):
   VFName = request.POST.get('VFName')
-  VFID = request.POST.get('VFID')
+  ID = request.POST.get('VFID')
   VFFromDate = request.POST('VFFromDate')
   VFToDate = request.POST.get('VFToDate')
   VFReason = request.POST.get('VFReason')
   VFStatus = request.POST.get('VFStatus')
-  VFData = VacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
+  VFData = VacationForm(VFName = VFName, VFID = ID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
   return HttpResponseRedirect(reverse('VFDisplay'))
@@ -179,7 +201,7 @@ def addVacationForm(request):
 
 # def vacationFormFields(request, EmployeeID):
 #   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
-#   template = loader.get_template('output.html')
+#   template = loader.get_template('searchEmpOutput.html')
 #   context = {
 #     'mymember': mymember,
 #   }
@@ -192,7 +214,7 @@ def addVacationForm(request):
 #     name=request.POST.get('EmployeeName')
 #     return HttpResponse(name)
 #   return render(request, 'phase1.html',{'mysorm':RegisterForm})
-  
-  
+
+
 #     # return render(request, 'home.html')
 

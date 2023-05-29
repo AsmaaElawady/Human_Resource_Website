@@ -1,22 +1,19 @@
 
-const searchForm = document.querySelector("#searchForm")
-      const searchResaultContainer = document.querySelector("#searchResults")
+function validate(){
+     let empName = document.getElementById('empName').value;
 
-      //put event listener to see the sumbtion
-      searchForm.addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          const employeeName = document.getElementById('empName').value;
-
-
-
-          $.post("/getEmployee/", { eName: employeeName }, (data) => {
-
-              searchResaultContainer.innerHTML = data;
-
-
-          });
-
-      });
-
-console.log("zeh2t");
+   if(!empName){
+    alert("Enter name to search");
+    return false
+   }
+   return true;
+}
+// searchButton.addEventListener('click', function(event) {
+//
+//    // Prevent the form from submitting
+//    event.preventDefault();
+//
+//
+//    // Get the value entered by the user
+//
+// });

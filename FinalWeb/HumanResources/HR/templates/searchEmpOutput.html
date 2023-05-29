@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'navbar.html' %}
+    {% load static %}
+    <meta charset="UTF-8" />
+    <title>Search Employee output</title>
+    <link rel="stylesheet" href="{% static 'css/searchEmpOutput.css'%}" />
+    <meta name="description" content="" />
+    <style>
+      body {
+          background-image: url("{% static 'image/HP2v3.png' %}");
+      }
+  </style>
+  </head>
+
+<body>
+ <br /><br /><br />
+
+<div class="listEmp">
+<h1> Search result </h1>
+
+</div>
+
+<br/><br/><br/>
+    <table>
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>  </th>
+    </tr>
+
+
+            {% for key, value in results.items %}
+                <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+            <td><button id="button"><a href = "vacationForm.html">request vacation</a></button> </td>
+                </tr>
+            {% endfor %}
+
+
+    </table>
+
+
+
+</body>
+
+</html>
+

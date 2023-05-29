@@ -4,8 +4,12 @@
     {% include 'navbar.html' %}
     {% load static %}
     <meta charset="UTF-8" />
+
     <title>Search Employee</title>
+
     <link rel="stylesheet" href="{% static 'css/searchEmp.css'%}" />
+
+    <script type="text/javascript" src="{% static 'js/searchEmp.js' %}"></script>
     <meta name="description" content="" />
     <style>
       body {
@@ -22,7 +26,7 @@
       <br />
       <h1>Search Employee</h1>
       <br />
-      <form id ="searchForm" method="post" action="/getEmployee/">
+      <form id ="searchForm" onsubmit="return validate()"  method="post" action="/getEmployee/">
            {% csrf_token %}
         <label for="empId">Enter Employee first name:</label><br /><br />
         <input id="empName" class="inputbox" type="text" name="empName" /><br /><br
@@ -31,43 +35,6 @@
 
       </form>
 <br><br><br>
-{#        <script#}
-{#          src="https://code.jquery.com/jquery-3.6.0.min.js">#}
-{#  </script>#}
-{#<script src = "{% static "js/searchEmp.js" %}"></script>#}
-
-{#        <script>#}
-{##}
-{##}
-{#            const searchForm = document.querySelector("#searchForm")#}
-{#      const searchResaultContainer = document.querySelector("#searchResults")#}
-{##}
-{#      //put event listener to see the sumbtion#}
-{#      searchForm.addEventListener("submit", function (event) {#}
-{#          event.preventDefault();#}
-{##}
-{#          const employeeName = document.getElementById('empName').value;#}
-{##}
-{##}
-{##}
-{#          $.post("/getEmployee/", { eName: employeeName }, (data) => {#}
-{##}
-{#              searchResaultContainer.innerHTML = data;#}
-{##}
-{##}
-{#          });#}
-{#      });#}
-{#</script>#}
-      <!-- Container for the search results -->
-      <div id="searchResults" >
-
-              {% for i in results %}
-
-             <li>{{i}}</li>
-
-              {% endfor %}
-
-      </div>
     </div>
 
 
