@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import VacationForm
+from .models import RegisteredVacationForm
 
 
-# Register your models here.
-admin.site.register(VacationForm)
+# # Register your models here.
+admin.site.register(RegisteredVacationForm)

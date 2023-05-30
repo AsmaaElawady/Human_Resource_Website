@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
-from .models import VacationForm
+from .models import RegisteredVacationForm
 # from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
@@ -106,7 +106,7 @@ def HomePage(request):
   return render(request, 'HomePage.html')
 
 def VRDisplay(request):
-    employees = VacationForm.objects.values('VFName')
+    employees = RegisteredVacationForm.objects.values('VFName')
     return render(request, 'VR.html', {'employees': employees})
 
 def VFDisplay(request):
@@ -148,12 +148,12 @@ def outPut(request):
 
 def addVacationForm(request):
   VFName = request.POST.get('VFName')
-  ID = request.POST.get('VFID')
+  VFID = request.POST.get('VFID')
   VFFromDate = request.POST('VFFromDate')
   VFToDate = request.POST.get('VFToDate')
   VFReason = request.POST.get('VFReason')
   VFStatus = request.POST.get('VFStatus')
-  VFData = VacationForm(VFName = VFName, id = ID, VFFromDate = VFFromDate
+  VFData = RegisteredVacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
   return HttpResponseRedirect(reverse('VFDisplay'))

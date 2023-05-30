@@ -29,9 +29,9 @@ class RegisterForm(models.Model):
 
 
 
-class VacationForm(models.Model):
+class RegisteredVacationForm(models.Model):
     VFName = models.CharField(max_length = 50)
-    id = models.CharField(max_length = 50, primary_key=True)
+    VFID = models.CharField(max_length = 50)
     VFFromDate = models.DateField()
     VFToDate = models.DateField()
     VFReason = models.TextField()
