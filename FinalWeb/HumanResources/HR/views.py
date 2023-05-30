@@ -3,6 +3,7 @@ from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
 from .models import RegisteredVacationForm
+
 # from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
@@ -37,6 +38,7 @@ def addrecord(request):
 
 def delete(request, EmployeeID):
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
+
   member.delete()
   return HttpResponseRedirect(reverse('index'))
 
@@ -67,6 +69,7 @@ def updaterecord(request, EmployeeID):
   Salary = request.POST['Salary']
   NumberVacation = request.POST['NumberVacation']
   NumberApprovedVacation = request.POST['NumberApprovedVacation']
+  #status = request.POST['Status']
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
   member.EmployeeName = EmployeeName
   member.EmployeeID = EmployeeID
@@ -76,6 +79,7 @@ def updaterecord(request, EmployeeID):
   member.Salary = Salary
   member.NumberVacation = NumberVacation
   member.NumberApprovedVacation = NumberApprovedVacation
+  # member.Status = status
   member.save()
   return HttpResponseRedirect(reverse('index'))
 

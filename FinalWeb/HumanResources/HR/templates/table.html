@@ -1,7 +1,8 @@
 {% include 'navbar.html' %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'css/addEmployee.css' %}">
+<link rel="stylesheet" href="{% static 'css/table.css' %}">
+<script src="{% static 'js/deleteConfimation.js' %}" ></script>
 <style>
     body {
         background-image: url("{% static 'image/HP2v3.png' %}");
@@ -10,7 +11,24 @@
 <body>
 {% block content %}
 
-<table border="1">
+<table border="1" id="table">
+
+<tr class = "header">
+<td class = "header">ID</td>
+<td class = "header">Name</td>
+<td class = "header">Email</td>
+<td class = "header">Phone Number</td>
+<td class = "header">Address</td>
+<td class = "header">Salary</td>
+<td class = "header">Number of <br> Vacation days</td>
+<td class = "header">Number of days <br> Approved</td>
+<td class = "header">Date Of Birth</td>
+<td class = "header"> Gender</td>
+<td class = "header">Status</td>
+<td class = "header">Maritual <br> Status</td>
+<td class = "header"></td>
+<td class="header"></td>
+</tr>
 {% for x in mymembers %}
 <tr>
 <td>{{ x.EmployeeID }}</td>
@@ -25,15 +43,11 @@
 <td>{{ x.Gender }}</td>
 <td>{{ x.Status }}</td>
 <td>{{ x.MARITALSTATUE }}</td>
-<td><a href="update/{{ x.EmployeeID }}">Update</a></td>
-<td><a href="delete/{{ x.EmployeeID }}">Delete</a></td>
+<td class="btn"><a href="update/{{ x.EmployeeID }}" class="link">Update </a></td>
+<td class="btn"><a href="delete/{{ x.EmployeeID }}" class="link"  onclick="confirmDelete()">Delete</a></td>
 </tr>
 {% endfor %}    
 </table>
-
-<p>
-    <a href="add/">Add Employee</a>
-</p>
 </body>
 
 
