@@ -1,4 +1,12 @@
-
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}
 .navBar{
     background-color: #ffffff;
     overflow: hidden;
@@ -8,7 +16,7 @@
 }
 .navBar a{
     float: left;
-    color: #056c89;
+    color: #2f56d6;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
@@ -23,6 +31,6 @@
 
 /* Add a color to the active/current link */
 .navBar a.active {
-    background-color: #458fe8;
+    background-color: #c3e4e9;
     color: white;
 }
