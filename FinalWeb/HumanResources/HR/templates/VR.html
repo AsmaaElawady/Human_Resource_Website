@@ -22,7 +22,7 @@
         
     </br></br>
     <!-- Container for the search results -->
-    <div id="searchResults"></div>
+    {% comment %} <div id="searchResults"></div>
         <div>
             {{ table }}
 
@@ -49,7 +49,63 @@
   
     alert('Vacation request rejected for Employee ID: ' + employeeID);
                                                                         }
-        </script>
+        </script> {% endcomment %}
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Vacation ID
+                    </th>
+                    <th>
+                        From Date
+                    </th>
+                    <th>
+                        To Data
+                    </th>
+                    <th>
+                        Reason
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+            </thead>
+            {% for instance in data %}
+                <tr>
+                    <td>
+                        {{instance.fields.VFName}}
+                    </td>
+                    <td>
+                        {{instance.fields.VFID}}
+                    </td>
+                    <td>
+                        {{instance.fields.VFFromDate}}
+                    </td>
+                    <td>
+                        {{instance.fields.VFToDate}}
+                    </td>
+                    <td>
+                        {{instance.fields.VFReason}}
+                    </td>
+                    <td>
+                        {{instance.fields.VFStatus}}
+                    </td>
+                    <td>
+                        <a href="approve/{{ instance.fields.VFName }}" class="link"> Approve </a>
+                    </td>
+                    <td><a href="reject/{{instance.fields.VFName}}" class="link"> Reject </a>
+                    </td>
+                </tr>
+            {%endfor%}
+        </table>
 
     </body>
 </html>

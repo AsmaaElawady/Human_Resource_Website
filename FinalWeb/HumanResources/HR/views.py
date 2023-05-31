@@ -9,6 +9,17 @@ from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
 # from .models import Upform
 
+#To capture the records from database in dictionary.
+def vacationRequest(request):
+  from django.core import serializers
+  data = serializers.serialize("python", RegisteredVacationForm.objects.all())
+
+  context = {
+    'data' : data
+  }
+
+  return render(HttpResponse, 'VR.html', context)
+
 def index(request):
   return render(request, 'HomePage.html')
   
@@ -59,6 +70,18 @@ def vacationFormFields(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
+def approve(request, name):
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberVacation = '9')
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberApprovedVacation = '5')
+
+  vacationForm = RegisteredVacationForm.objects.get(VFName=name)
+  vacationForm.delete()
+  return HttpResponseRedirect(reverse('index'))
+
+def reject(request, name):
+  vacationForm = RegisteredVacationForm.objects.get(VFName=name)
+  vacationForm.delete()
+  return HttpResponseRedirect(reverse('index'))
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -110,8 +133,16 @@ def HomePage(request):
   return render(request, 'HomePage.html')
 
 def VRDisplay(request):
-    employees = RegisteredVacationForm.objects.values('VFName')
-    return render(request, 'VR.html', {'employees': employees})
+    # employees = RegisteredVacationForm.objects.values('VFName')
+    # return render(request, 'VR.html', {'employees': employees})
+    from django.core import serializers
+    data = serializers.serialize("python", RegisteredVacationForm.objects.all())
+
+    context = {
+      'data' : data
+    }
+
+    return render(request, 'VR.html', context)
 
 def VFDisplay(request):
     # template = loader.get_template('vacationForm.html')
