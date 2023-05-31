@@ -167,11 +167,6 @@ def getEmployee(request):
     name = request.POST['empName']
 
     employees = RegisterForm.objects.filter(EmployeeName__icontains = name)
-    # results_html = []
-    #
-    #
-    # for employee in employees:
-    #   results_html.append(employee.EmployeeName +" "+ employee.EmployeeID)
     results_html = {}
     for employee in employees:
       results_html[employee.EmployeeName] = employee.EmployeeID

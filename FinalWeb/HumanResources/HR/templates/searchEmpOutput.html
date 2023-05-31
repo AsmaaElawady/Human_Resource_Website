@@ -24,24 +24,28 @@
 </div>
 
 <br/><br/><br/>
+
+  {% if result.length != 0 %}
     <table>
     <tr>
         <th>Name</th>
         <th>ID</th>
         <th>  </th>
     </tr>
-
-
-            {% for key, value in results.items %}
+         {% for key, value in results.items %}
                 <tr>
             <td>{{ key }}</td>
             <td>{{ value }}</td>
             <td><button id="button"><a href = "vacationForm.html">request vacation</a></button> </td>
                 </tr>
             {% endfor %}
+       </table>
+      {% else  %}
+      <p>No Employees with that name</p>
+    {% endif %}
 
 
-    </table>
+
 
 
 
