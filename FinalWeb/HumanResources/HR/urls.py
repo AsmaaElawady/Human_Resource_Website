@@ -7,7 +7,7 @@ urlpatterns = [
     path('add/', views.add, name='add'),
     path('addVF/', views.addVF, name='addVF'),
     path('addrecord/', views.addrecord, name='addrecord'),
-    path('addVacationForm/', views.addVacationForm, name='addVacationForm'),
+    path('getEmployee/addVacationForm/', views.addVacationForm, name='addVacationForm'),
     path('delete/<int:EmployeeID>', views.delete, name='delete'),
     path('VR/approve/<name>', views.approve, name='approve'),
     path('VR/reject/<name>', views.reject, name='rejcet'),
@@ -19,7 +19,6 @@ urlpatterns = [
     # path('VR/',views.vacationRequest,name='vr'),
     path('outPut/',views.outPut, name = 'outPut'),
     path('getEmployee/vacationForm.html', views.VFDisplay, name='VFDisplay'),
-
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),
     # # path('delete/<event_id>', views.delete, name='delete'),

@@ -1,65 +1,71 @@
-{% include 'navbar.html' %}
-{% load static %}
+{% include 'navbar.html' %} {% load static %}
 
-<link rel = "stylesheet" href = "{% static 'css/vacationForm.css' %}">
+<link rel="stylesheet" href="{% static 'css/vacationForm.css' %}" />
 
 {% block content%}
-<!DOCTYPE  html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Vacation Form</title>
-        <meta name = "describtion" content=""/>
-        <style>
-            body {
-                background-image: url("{% static 'image/HP2v3.png' %}");
-            }
-        </style>  
-    </head>
-    <body id="bodyy">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vacation Form</title>
+    <meta name="describtion" content="" />
+    <style>
+      body {
+        background-image: url("{% static 'image/HP2v3.png' %}");
+      }
+    </style>
+  </head>
+  <body id="bodyy">
+    <div>
+      <h1>Fill the Vacation Form</h1>
+      <form class="formData" method="POST" action="addVacationForm/">
+        {% csrf_token %}
+        <br /><br />
         <div>
-            <h1> Fill the Vacation Form </h1>
-            <form class="formData" method = "POST">   
-                {% csrf_token %}
-                <br><br>
-                <div>
-                    <label> Name </label>
-                    <input type = "text" id = "VEmpName"  placeholder="Name"
-                    required name = "VFName"/>
-                </div>
-                <div>
-                    <label> ID </label>
-                    <input type = "text" id = "empID"  placeholder="ID"
-                     name = "VFID" required/>
-                </div>
-                <div>
-                    <label> From Date </label>
-                    <input type = "date" id = "fromDate" name = "VFFromDate"/>
-                </div>
-                <div>
-                    <label> To Date </label>
-                    <input type = "date" id = "toDate" name = "VFToDate"/>
-                </div>
-                <div>
-                    <label> Reason </label>
-                    <input type = "text" id = "VReason"
-                    placeholder="The Reason Is ..." name = "VFReason"/>
-                </div>
-                <div>
-                    <label> Status </label>
-                    <input type = "text" id="Vstatus" value="submitted"
-                    name = "VFStatus"/>
-                </div>
-                <div id = error></div>
-                <br>
-                <div>
-                    <br>
-                <input type = "submit" id = "sbmtbtn"/>
-                </div>
-        </form>
-        <br>
+          <label> Name </label>
+          <input
+            type="text"
+            id="VEmpName"
+            placeholder="Name"
+            required
+            name="VFName"
+          />
+        </div>
+        <div>
+          <label> ID </label>
+          <input type="text" id="empID" placeholder="ID" name="VFID" required />
+        </div>
+        <div>
+          <label> From Date </label>
+          <input type="date" id="fromDate" name="VFFromDate" />
+        </div>
+        <div>
+          <label> To Date </label>
+          <input type="date" id="toDate" name="VFToDate" />
+        </div>
+        <div>
+          <label> Reason </label>
+          <input
+            type="text"
+            id="VReason"
+            placeholder="The Reason Is ..."
+            name="VFReason"
+          />
+        </div>
+        <div>
+          <label> Status </label>
+          <input type="text" id="Vstatus" value="submitted" name="VFStatus" />
+        </div>
+        <div id="error"></div>
+        <br />
+        <div>
+          <br />
+          <input type="submit" id="sbmtbtn" />
+        </div>
+      </form>
+      <br />
     </div>
-    </body>
+  </body>
 </html>
 
 {% endblock content %}

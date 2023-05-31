@@ -71,8 +71,13 @@ def vacationFormFields(request, EmployeeID):
   return HttpResponse(template.render(context, request))
 
 def approve(request, name):
-  RegisterForm.objects.filter(EmployeeName=name).update(NumberVacation = '9')
-  RegisterForm.objects.filter(EmployeeName=name).update(NumberApprovedVacation = '5')
+  num1 = RegisterForm.objects.filter(EmployeeName=name)
+  n1 = num1[0].NumberVacation
+  n2 = num1[0].NumberApprovedVacation
+
+  # num2 = RegisterForm.objects.filter(EmployeeName=name).only('NumberApprovedVacation')
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberVacation = n1 - 1)
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberApprovedVacation = n2 + 1)
 
   vacationForm = RegisteredVacationForm.objects.get(VFName=name)
   vacationForm.delete()
@@ -184,7 +189,7 @@ def outPut(request):
 def addVacationForm(request):
   VFName = request.POST.get('VFName')
   VFID = request.POST.get('VFID')
-  VFFromDate = request.POST('VFFromDate')
+  VFFromDate = request.POST.get('VFFromDate')
   VFToDate = request.POST.get('VFToDate')
   VFReason = request.POST.get('VFReason')
   VFStatus = request.POST.get('VFStatus')
