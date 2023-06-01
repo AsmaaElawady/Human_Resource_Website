@@ -2,6 +2,8 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/table.css' %}">
+{#<link rel="stylesheet" href="{% static 'css/searchEmpOutput.css' %}">#}
+
 <script src="{% static 'js/deleteConfimation.js' %}" ></script>
 <style>
     body {
@@ -11,7 +13,7 @@
 <body>
 {% block content %}
 
-<table border="1" id="table">
+<table  id="table">
 
 <tr class = "header">
 <td class = "header">ID</td>
@@ -43,8 +45,8 @@
 <td>{{ x.Gender }}</td>
 <td>{{ x.Status }}</td>
 <td>{{ x.MARITALSTATUE }}</td>
-<td class="btn"><a href="update/{{ x.EmployeeID }}" class="link">Update </a></td>
-<td class="btn"><a href="delete/{{ x.EmployeeID }}" class="link"  onclick="confirmDelete()">Delete</a></td>
+<td class="btn"><button><a href="update/{{ x.EmployeeID }}" class="link">Update </a></button></td>
+<td class="btn"><button><a href="delete/{{ x.EmployeeID }}" class="link"  onclick="confirmDelete()">Delete</a></button></td>
 </tr>
 {% endfor %}    
 </table>

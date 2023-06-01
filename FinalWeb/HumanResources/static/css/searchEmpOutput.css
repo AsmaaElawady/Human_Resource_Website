@@ -6,23 +6,34 @@
     color: #056c89;
     width: 300px;
     height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-radius: 8px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#searchEmpty{
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    height: 100px;
     border-radius: 10px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 }
 
-/*h1{*/
-/*    background-color: white;*/
-/*    background-size: 40px;*/
-/*    text-align: center;*/
-/*    border-radius: 10px;*/
-/*    position: relative;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*}*/
+h1{
+
+    font-size: 23px;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
 
 #button {
     height: 40px;
@@ -33,6 +44,8 @@
     font-size: 13px;
     color: white;
     border-radius: 15px;
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 
 
 }
@@ -52,6 +65,7 @@ table {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
   }
 

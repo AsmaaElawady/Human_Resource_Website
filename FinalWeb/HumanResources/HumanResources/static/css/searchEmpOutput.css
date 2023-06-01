@@ -10,16 +10,28 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#searchEmpty{
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 }
 
 h1{
 
     font-size: 23px;
-    text-align: center;
     border-radius: 10px;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
@@ -32,6 +44,8 @@ h1{
     font-size: 13px;
     color: white;
     border-radius: 15px;
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 
 
 }
@@ -51,6 +65,7 @@ table {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
   }
 

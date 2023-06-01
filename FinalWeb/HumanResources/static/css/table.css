@@ -1,20 +1,111 @@
-.header
-{
-    background-color: #458fe8;
+/*.header*/
+/*{*/
+/*    background-color: #458fe8;*/
+/*}*/
+
+/*#table*/
+/*{*/
+/*    background-color: white;*/
+
+/*}*/
+
+/*.btn*/
+/*{*/
+/*    background-color: #458fe8;*/
+/*}*/
+/*.link*/
+/*{*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+
+/*}*/
+
+#button {
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    border: 2px white;
+    background-color: #c3e4e9;
+    font-size: 13px;
+    color: white;
+    border-radius: 15px;
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+
+
 }
 
-#table
-{
+#button:hover{
+    background-color:  #056c89;
+}
+
+table {
+
     background-color: white;
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    border-collapse: collapse ;
+    border: lightgray;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+  }
+
+  /* Style the table header cells */
+  .header {
+    background-color: #c3e4e9;
+    color: white;
+    text-align: center;
+    padding: 8px;
+      width: 140px ;
+  }
+
+  /* Style the table data cells */
+  td {
+    background-color: white;
+    padding: 8px;
+    width: 140px;
+    text-align: center;
+
+  }
+
+  /* Add zebra-striping to the table rows */
+  tr:nth-child(even) {
+    background-color: white;
+  }
+
+  th:first-child,
+td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.btn
-{
-    background-color: #458fe8;
+  th:last-child,
+td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.link
-{
+
+  a:link {
+    text-decoration: none;
+      color: black;
+  }
+
+  a:visited {
     text-decoration: none;
     color: black;
+  }
 
-}
+  a:hover {
+    text-decoration: none;
+  }
+
+  a:active {
+    text-decoration: none;
+  }

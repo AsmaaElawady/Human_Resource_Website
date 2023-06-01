@@ -19,14 +19,22 @@
  <br /><br /><br />
 
 <div class="listEmp">
+
 <h1> Search result </h1>
 
 </div>
 
 <br/><br/><br/>
 
-  {% if result.length != 0 %}
-    <table>
+  {% if not results %}
+      <div id="searchEmpty">
+      <br/>
+          <p>No Employees with that name</p>
+      </div>
+
+
+      {% else  %}
+      <table>
     <tr>
         <th>Name</th>
         <th>ID</th>
@@ -40,8 +48,7 @@
                 </tr>
             {% endfor %}
        </table>
-      {% else  %}
-      <p>No Employees with that name</p>
+
     {% endif %}
 
 

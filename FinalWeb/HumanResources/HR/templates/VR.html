@@ -7,6 +7,8 @@
     <head>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="{% static 'css/VRCSS.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/searchEmpOutput.css' %}"/>
+
 
         <title>
             Vacations Requests 
@@ -99,9 +101,9 @@
                         {{instance.fields.VFStatus}}
                     </td>
                     <td>
-                        <a href="approve/{{ instance.fields.VFName }}" class="link"> Approve </a>
+                        <button><a href="approve/{{ instance.fields.VFName }}" class="link"> Approve </a></button>
                     </td>
-                    <td><a href="reject/{{instance.fields.VFName}}" class="link"> Reject </a>
+                    <td><button><a href="reject/{{instance.fields.VFName}}" class="link"> Reject </a></button>
                     </td>
                 </tr>
             {%endfor%}
