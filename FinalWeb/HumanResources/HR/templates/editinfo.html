@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="homePage.css"> -->
     <meta name="description" content="This is the editing page" />
     <link rel="stylesheet" href="{% static 'css/updateEmployee.css' %}">
+    <script src="{% static 'js/updateEmployee.js' %}"></script>
     <style>
         body {
             background-image: url("{% static 'image/HP2v3.png' %}");
@@ -30,13 +31,13 @@
     <br>
     <h1 id = "head">Update Employee</h1>
     <div class="bigdiv">
-        <form name="upform" action="updaterecord/{{ mymember.EmployeeID }}" method="post" >
+        <form name="upform" action="updaterecord/{{ mymember.EmployeeID }}" method="POST" onsubmit='loadDoc()' >
             {% csrf_token %}
             <div class="radio1">
                 <div>
                     <br>
                     <label> Name</label>
-                    <input class="nametbup" type="text" id="new" name="EmployeeName" value="{{ mymember.EmployeeName }}"> <br>
+                    <input class="nametbup" type="text" id="new" name="EmployeeName" value="{{ mymember.EmployeeName }}" > <br>
                 </div>
                 <br>
                 <div>
@@ -101,7 +102,7 @@
                 <br>
             -->
                 <div class="choose1">
-                    <div class="choose1"> <label for="gender">Status: </label></div>
+                    <div class="choose1"> <label>Status: </label></div>
                     <div class="choose">
                         <input type="radio" required name="status" id="active" value="Active">
                     </div>

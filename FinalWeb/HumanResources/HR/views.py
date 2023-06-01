@@ -109,7 +109,7 @@ def updaterecord(request, EmployeeID):
   member.NumberApprovedVacation = NumberApprovedVacation
   # member.Status = status
   member.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('table'))
 
 def fillVacationFormFields(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']

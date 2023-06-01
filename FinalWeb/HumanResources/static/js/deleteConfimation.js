@@ -1,4 +1,4 @@
 function confirmDelete()
 {
-    var r=confirm("Do you want to leave page!");
+    var r=confirm("Do you want to this employee");
 }
