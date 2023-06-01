@@ -1,7 +1,6 @@
 
 body {
     margin: 0;
-    /*background-image: url("{% static 'image/HP2v3.png' %}");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
