@@ -19,6 +19,12 @@
 /*    color: black;*/
 
 /*}*/
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 #button {
     height: 40px;
