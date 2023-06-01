@@ -5,9 +5,8 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('add/', views.add, name='add'),
-    path('addVF/', views.addVF, name='addVF'),
+    path('addVF/<int:EmployeeID>/', views.addVF, name='addVF'),
     path('addrecord/', views.addrecord, name='addrecord'),
-    path('getEmployee/addVacationForm/', views.addVacationForm, name='addVacationForm'),
     path('delete/<int:EmployeeID>', views.delete, name='delete'),
     path('VR/approve/<name>', views.approve, name='approve'),
     path('VR/reject/<name>', views.reject, name='rejcet'),
@@ -18,7 +17,14 @@ urlpatterns = [
     path('VR/',views.VRDisplay,name='VRDisplay'),
     # path('VR/',views.vacationRequest,name='vr'),
     path('outPut/',views.outPut, name = 'outPut'),
-    path('getEmployee/vacationForm.html', views.VFDisplay, name='VFDisplay'),
+    path('getEmployee/vacationForm.html/', views.addVF, name='addVF'),
+    path('getEmployee/addVF/<int:EmployeeID>', views.addVF, name='addVF'),
+    path('vacationForm.html/<int:EmployeeID>/', views.addVF, name='addVF'),
+    path('getEmployee/addVF/addVacationForm/<int:EmployeeID>', views.addVacationForm, name='addvacationForm'),
+
+ 
+
+
     # path('update/', views.update, name='update'),
     # path('updateEmp/', views.updateEmp, name='updateEmp'),
     # # path('delete/<event_id>', views.delete, name='delete'),

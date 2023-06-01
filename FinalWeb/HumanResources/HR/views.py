@@ -149,14 +149,15 @@ def VRDisplay(request):
 
     return render(request, 'VR.html', context)
 
-def VFDisplay(request):
-    # template = loader.get_template('vacationForm.html')
-    # return HttpResponse(template.render({}, request))
-    return render(request,'vacationForm.html')
 
-def addVF(request):
+def addVF(request,EmployeeID):
+  mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
   template = loader.get_template('vacationForm.html')
-  return HttpResponse(template.render({}, request))
+  context = {
+    'mymember': mymember,
+  }
+  return HttpResponse(template.render(context, request))
+
 
 def searchEmployee(request):
   return render(request,'searchEmp.html')
@@ -181,7 +182,7 @@ def outPut(request):
   return render(request,"searchEmpOutput.html")
 
 
-def addVacationForm(request):
+def addVacationForm(request,EmployeeID):
   VFName = request.POST.get('VFName')
   VFID = request.POST.get('VFID')
   VFFromDate = request.POST.get('VFFromDate')
@@ -191,7 +192,7 @@ def addVacationForm(request):
   VFData = RegisteredVacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
-  return HttpResponseRedirect(reverse('VFDisplay'))
+  return HttpResponseRedirect(reverse('index'))
 
 # def VF(request):
 #   return render(request, 'vacationForm.html')
