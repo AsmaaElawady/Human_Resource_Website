@@ -1,89 +1,58 @@
 body {
     margin: 0;
-    background-image: url("#HP2v3.png");
+    background-image: url("HP2v3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-/*!* Add a black background color to the top navigation *!*/
-/*.navBar {*/
-/*    background-color: #ffffff;*/
-/*    overflow: hidden;*/
-/*    position: fixed;*/
-/*    width: 100%;*/
-/*    height: 50px;*/
-/*}*/
+/* Add a black background color to the top navigation */
+.navBar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
 
-/*!* Style the links inside the navigation bar *!*/
-/*.navBar a {*/
-/*    float: left;*/
-/*    color: #2f56d6;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 19px;*/
-/*    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;*/
-/*}*/
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
 
-/*!* Change the color of links on hover *!*/
-/*.navBar a:hover {*/
-/*    background-color: #ddd;*/
-/*    color: black;*/
-/*}*/
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-/*!* Add a color to the active/current link *!*/
-/*.navBar a.active {*/
-/*    background-color: #458fe8;*/
-/*    color: white;*/
-/*}*/
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
 
-/*.logo{*/
-/*    float: right;*/
-/*    color: #2f56d6;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 22px;*/
-/*    margin-right: 5%;*/
-/*}*/
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}
 
 h1{
     text-align: center;
-    color: #056c89;
-    font-size: 40px;
-    position: relative;
-    padding: 10px;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: #12519f;
+    font-size: 50px;
 }
 
 h3{
     text-align: center;
     font-size: 25px;
-    color: #88b4be;
-    position: relative;
-    padding: 10px;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
-
-.text{
-   text-align: center;
-    background-color: #eeeeee;
-    width: 800px;
-    height: 150px;
-    border-radius: 10px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
-.text2{
-   text-align: center;
-    background-color: white;
-    width: 1000px;
-    height: 150px;
-    border-radius: 10px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }

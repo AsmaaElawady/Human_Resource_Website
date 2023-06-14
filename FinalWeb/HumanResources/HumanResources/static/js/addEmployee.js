@@ -29,6 +29,11 @@ function validateForm() {
   }
 }
 
+function addemployee()
+{
+    var Add=alert("Employee Added Successfully");
+}
+
 // function signup(e) {
 //   event.preventDefault();
 //   var EmployeeName = document.getElementById("EmployeeName").value;

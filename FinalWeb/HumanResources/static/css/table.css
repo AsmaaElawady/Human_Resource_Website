@@ -1,24 +1,3 @@
-/*.header*/
-/*{*/
-/*    background-color: #458fe8;*/
-/*}*/
-
-/*#table*/
-/*{*/
-/*    background-color: white;*/
-
-/*}*/
-
-/*.btn*/
-/*{*/
-/*    background-color: #458fe8;*/
-/*}*/
-/*.link*/
-/*{*/
-/*    text-decoration: none;*/
-/*    color: black;*/
-
-/*}*/
 body {
     margin: 0;
     background-repeat: no-repeat;
@@ -26,7 +5,7 @@ body {
     background-size: cover;
 }
 
-#button {
+/* #button {
     height: 40px;
     width: 100px;
     margin-top: 20px;
@@ -35,11 +14,9 @@ body {
     font-size: 13px;
     color: white;
     border-radius: 15px;
-        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
-
-
-}
+} */
 
 #button:hover{
     background-color:  #056c89;
@@ -65,7 +42,7 @@ table {
 
   /* Style the table header cells */
   .header {
-    background-color: #c3e4e9;
+    background-color: #12519f;
     color: white;
     text-align: center;
     padding: 8px;
@@ -98,20 +75,89 @@ td:last-child {
   border-bottom-right-radius: 10px;
 }
 
-  a:link {
-    text-decoration: none;
-      color: black;
-  }
 
-  a:visited {
-    text-decoration: none;
+a:link {
+  text-decoration: none;
     color: black;
-  }
+}
 
-  a:hover {
-    text-decoration: none;
-  }
+a:visited {
+  text-decoration: none;
+  color: black;
+}
 
-  a:active {
-    text-decoration: none;
-  }
+
+::-webkit-input-placeholder {
+  font-size: 130%;
+}
+
+input:focus::-webkit-input-placeholder {
+  font-size: 150%;
+  position: top;
+  top: -15px;
+  color: black;
+  transition: 0.2s ease-out;
+}
+
+.here_icon{
+  height: 150px;
+  width: 150px;
+}
+
+/* Add a black background color to the top navigation */
+.navBar {
+  background-color: #ffffff;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+  float: left;
+  color: #2f56d6;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+  background-color: #458fe8;
+  color: white;
+}
+
+.logo{
+  float: right;
+  color: #2f56d6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 5%;
+}
+
+h1{
+  color: #12519f;
+  font-size: 40px;
+  margin: 0;
+}
+
+
+.btn {
+  height: 35px;
+  width: 320px;
+  margin-top: 20px;
+  border: none;
+  background-color: #12519f;
+  font-size: 15px;
+  color: white;
+  border-radius: 15px;
+}

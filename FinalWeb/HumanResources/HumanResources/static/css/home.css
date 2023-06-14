@@ -105,7 +105,7 @@
 
 body {
     margin: 0;
-    background-image: url("#HP2v3.png");
+    background-image: url("HP2v3.png");
     background-repeat: no-repeat;
     background-attachment: fixed; /*background-image that will not scroll with the page (fixed): */
     background-size: cover;

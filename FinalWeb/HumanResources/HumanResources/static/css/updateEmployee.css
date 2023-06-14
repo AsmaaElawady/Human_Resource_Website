@@ -1,4 +1,3 @@
-
 #head{
     color: #12519f;
     font-size: 40px;
@@ -18,7 +17,6 @@
 form{
     width: 300px;
     margin-left: 20px;
-    
 }
 form input{
     width: 100%;
@@ -55,7 +53,7 @@ form label {
 .bigdiv
 {
     width: 360px;
-    height: 1110px;
+    height: 850px;
     margin: auto;
     background-color: white;
     border-radius: 3px;
@@ -95,46 +93,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
-/*!* Add a black background color to the top navigation *!*/
-/*.navBar {*/
-/*    background-color: #ffffff;*/
-/*    overflow: hidden;*/
-/*    position: fixed;*/
-/*    width: 100%;*/
-/*    height: 50px;*/
-/*}*/
-
-/*!* Style the links inside the navigation bar *!*/
-/*.navBar a {*/
-/*    float: left;*/
-/*    color: #2f56d6;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 19px;*/
-/*}*/
-
-/*!* Change the color of links on hover *!*/
-/*.navBar a:hover {*/
-/*    background-color: #ddd;*/
-/*    color: black;*/
-/*}*/
-
-/*!* Add a color to the active/current link *!*/
-/*.navBar a.active {*/
-/*    background-color: #458fe8;*/
-/*    color: white;*/
-/*}*/
-
-/*.logo{*/
-/*    float: right;*/
-/*    color: #2f56d6;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 22px;*/
-/*    margin-right: 5%;*/
-/*}*/
 
 .whiteBox{
     width: 360px;
@@ -193,4 +151,45 @@ input[type=submit]{
     display: inline-block;
     margin-left: 10px;
     font-size: 13px;
+}
+
+
+/* Add a black background color to the top navigation */
+.navBar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
+
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
 }

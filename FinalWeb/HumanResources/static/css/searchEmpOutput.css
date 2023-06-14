@@ -10,7 +10,7 @@ body {
 .listEmp{
      text-align: center;
     background-color:white;
-    color: #056c89;
+    color: #12519f;
     width: 300px;
     height: 50px;
     border-radius: 8px;
@@ -47,11 +47,11 @@ h1{
     width: 100px;
     margin-top: 20px;
     border: 2px white;
-    background-color: #c3e4e9;
+    background-color: #12519f;
     font-size: 13px;
     color: white;
     border-radius: 15px;
-        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 
 
 
@@ -78,11 +78,11 @@ table {
 
   /* Style the table header cells */
   th {
-    background-color: #c3e4e9;
+    background-color: #12519f;
     color: white;
     text-align: center;
     padding: 8px;
-      width: 140px ;
+    width: 140px ;
   }
 
   /* Style the table data cells */
@@ -128,3 +128,43 @@ td:last-child {
   a:active {
     text-decoration: none;
   }
+
+
+  .navBar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    color: #2f56d6;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navBar a.active {
+    background-color: #458fe8;
+    color: white;
+}
+
+.logo{
+    float: right;
+    color: #2f56d6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 5%;
+}
