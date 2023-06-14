@@ -5,18 +5,6 @@ body {
     background-size: cover;
 }
 
-/* #button {
-    height: 40px;
-    width: 100px;
-    margin-top: 20px;
-    border: 2px white;
-    background-color: #c3e4e9;
-    font-size: 13px;
-    color: white;
-    border-radius: 15px;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-
-} */
 
 #button:hover{
     background-color:  #056c89;
@@ -78,12 +66,12 @@ td:last-child {
 
 a:link {
   text-decoration: none;
-    color: black;
+    color: white;
 }
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
@@ -150,14 +138,15 @@ h1{
   margin: 0;
 }
 
-
-.btn {
-  height: 35px;
-  width: 320px;
+button {
+  height: 40px;
+  width: 100px;
   margin-top: 20px;
-  border: none;
+  border: 2px white;
   background-color: #12519f;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
   border-radius: 15px;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 }

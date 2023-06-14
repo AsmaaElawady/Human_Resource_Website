@@ -19,7 +19,7 @@ body {
 form{
   margin-left: 35%;
 }
-button{
+/* button{
   border-radius: 35%;
   background-color: white;
   font-family: 'Times New Roman', Times, serif;
@@ -28,6 +28,18 @@ button{
   padding: 1%;
   width: 10%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+} */
+button {
+  height: 40px;
+  width: 100px;
+  margin-top: 20px;
+  border: 2px white;
+  background-color: #12519f;
+  font-size: 13px;
+  color: white;
+  border-radius: 15px;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
 }
 input{
   background-color: white;
@@ -79,57 +91,7 @@ th{
   background-color: #2f56d6;
   color: white;
 }
-/* 
-a:link {
-  text-decoration: none;
-}
 
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-} */
-
-/* .navBar {
-  background-color: #ffffff;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-} */
-/* 
-Style the links inside the navigation bar
-.navBar a {
-  float: left;
-  color: #2f56d6;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 19px;
-} */
-
-/* Change the color of links on hover */
-/* .navBar a:hover {
-  background-color: #ddd;
-  color: black;
-} */
-
-/* Add a color to the active/current link */
-/* .navBar a.active {
-  background-color: #458fe8;
-  color: white;
-}
-
-*{
-  background-color: #ddd;
-} */
-/* Add a black background color to the top navigation */
 .navBar {
   background-color: #ffffff;
   overflow: hidden;
@@ -174,3 +136,5 @@ h1{
   font-size: 40px;
   margin: 0;
 }
+
+
