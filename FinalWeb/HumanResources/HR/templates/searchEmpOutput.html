@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    {% include 'navbar.html' %}
+  <head>
     {% load static %}
     <meta charset="UTF-8" />
     <title>Search Employee output</title>
     <link rel="stylesheet" href="{% static 'css/searchEmpOutput.css'%}" />
+    {% include 'navbar.html' %}
+
     <meta name="description" content="" />
     <style>
       body {
-          background-image: url("{% static 'image/HP2v3.png' %}");
+        background-image: url("{% static 'image/HP2v3.png' %}");
       }
-  </style>
+    </style>
   </head>
 
-<body>
+  <body>
+    <br /><br /><br />
 
- <br /><br /><br />
+    <div class="listEmp">
+      <h1>Search result</h1>
+    </div>
 
-<div class="listEmp">
+    <br /><br /><br />
 
-<h1> Search result </h1>
+    {% if not results %}
+    <div id="searchEmpty">
+      <br />
+      <p>No Employees with that name</p>
+    </div>
 
-</div>
-
-<br/><br/><br/>
-
-  {% if not results %}
-      <div id="searchEmpty">
-      <br/>
-          <p>No Employees with that name</p>
-      </div>
-
-
-      {% else  %}
-      <table>
-    <tr>
+    {% else %}
+    <table>
+      <tr>
         <th>Name</th>
         <th>ID</th>
-        <th>  </th>
-    </tr>
-         {% for key, value in results.items %}
-                <tr>
-            <td>{{ key }}</td>
-            <td>{{ value }}</td>
+        <th></th>
+      </tr>
+      {% for key, value in results.items %}
+      <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
 
-            <td><button id="button"><a href = "addVF/{{value}}">request vacation</a></button> </td></tr>
-            {% endfor %}
-       </table>
+        <td>
+          <button id="button">
+            <a href="addVF/{{value}}" class="link">request vacation</a>
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
 
     {% endif %}
-
-
-
-
-
-
-</body>
-
+  </body>
 </html>
-

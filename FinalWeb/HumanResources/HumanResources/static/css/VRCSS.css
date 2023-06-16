@@ -19,16 +19,7 @@ body {
 form{
   margin-left: 35%;
 }
-/* button{
-  border-radius: 35%;
-  background-color: white;
-  font-family: 'Times New Roman', Times, serif;
-  border-color: white;
-  border-style:double;
-  padding: 1%;
-  width: 10%;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-} */
+
 button {
   height: 40px;
   width: 100px;
@@ -39,17 +30,30 @@ button {
   color: white;
   border-radius: 15px;
   font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 
 }
+
+.button:hover {
+  background-color:rgb(255, 255, 255);
+  transition: 0.7s;
+  color:#12519f;
+}
+ 
+.button:hover .link{
+  color:#12519f;
+}
+
 input{
   background-color: white;
   border-color: rgb(255, 255, 255);
   border-style: solid;
   width: 30%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-padding: 0.9%;
-text-align: center;
+  padding: 0.9%;
+  text-align: center;
 }
+ 
 .logo{
   float: right;
   color: #2f56d6;
@@ -60,66 +64,13 @@ text-align: center;
   margin-right: 5%;
 }
 
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
-  margin-left: 25%;
-}
-
-tr.textContext{
-  text-align: center;
-  margin: 10px;
-  size: 100px;
-}
-
-td, th {
-  border: 2px solid #ddd;
-  padding: 8px;
-  
-}
-
-
-tr{background-color: #f2f2f2;}
-
-/* tr:hover {background-color: #ddd;} */
-
 th{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: #2f56d6;
   color: white;
-}
-
-.navBar {
-  background-color: #ffffff;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-}
-
-/* Style the links inside the navigation bar */
-.navBar a {
-  float: left;
-  color: #2f56d6;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 19px;
-}
-
-/* Change the color of links on hover */
-.navBar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.navBar a.active {
-  background-color: #458fe8;
-  color: white;
-}
+} */
 
 .logo{
   float: right;
@@ -137,4 +88,60 @@ h1{
   margin: 0;
 }
 
+table {
+  border-collapse: collapse;
+  width: 65%;
+  color: #000000;
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+} 
 
+table th {
+  background-color: #12519f;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  letter-spacing: 1px;
+  border-top: 1px;
+  border-bottom: 1px solid #ccc;
+}
+
+table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+table tr:hover td {
+  background-color: #b5b7f2;
+}
+
+table td {
+  background-color: #fff;
+  padding: 7px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+ 
+a:link {
+  text-decoration: none;
+    color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}

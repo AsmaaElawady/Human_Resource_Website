@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'navbar.html' %} {% load static %}
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCAI Projects</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%} " />
+
+    <style>
+      body {
+        background-image: url("{% static 'image/HP2v3.png' %}");
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="text">
+      <h1>
+        <span>Welcome to</span>
+        <span>FCAI Projects</span>
+      </h1>
+      <p>
+        we aim to help you in many fields like human resources, and higher
+        Studies<br />
+        and more, and organize your work hope you like our website .
+      </p>
+    </div>
+
+    <input type="button" class="button" value="Get Started" />
+    <div class="row1">
+      <div class="img1">
+        <a href="{% url 'HomePage' %}"
+          ><img
+            class="column1"
+            src="{% static 'image/Human Resources.gif' %}"
+            alt="Human Resources Website"
+        /></a>
+        <a href="{% url 'HomePage' %}"
+          ><div class="text1">Go To Website</div></a
+        >
+      </div>
+
+      <div class="img2">
+        <img
+          class="column2"
+          src="{% static 'image/student affairs.gif' %}"
+          alt="Student Affairs Website"
+        />
+        <div class="text2">Go To Website</div>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="img3">
+        <img
+          class="column3"
+          src="{% static 'image/Higher Studies.gif' %}"
+          alt="Higher Studies Website"
+        />
+        <div class="text3">Go To Website</div>
+      </div>
+
+      <div class="img4">
+        <img
+          class="column4"
+          src="{% static 'image/Laboratory Tracking.gif' %}"
+          alt="Laboratory Tracking Website"
+        />
+        <div class="text4">Go To Website</div>
+      </div>
+    </div>
+  </body>
+</html>

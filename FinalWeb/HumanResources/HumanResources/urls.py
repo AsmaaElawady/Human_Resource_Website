@@ -25,6 +25,7 @@ urlpatterns = [
     # path('updateEmp/',include('HR.urls')),
     path('admin/', admin.site.urls),
     path('phase1',views.phase1,name='phase1'),
+    path('HomePage',views.HomePage,name='HomePage'),
     path('addVF/<int:EmployeeID>/',views.addVF,name='addVF'),
     path('table',views.table,name='table'),
 ]

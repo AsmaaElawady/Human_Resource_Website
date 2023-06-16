@@ -1,4 +1,3 @@
-{% include 'navbar.html' %}
 {% load static %}
 {% block content%}
 
@@ -11,6 +10,8 @@
     <!-- <link rel="stylesheet" href="homePage.css"> -->
     <meta name="description" content="This is the editing page" />
     <link rel="stylesheet" href="{% static 'css/updateEmployee.css' %}">
+    {% include 'navbar.html' %}
+
     <script src="{% static 'js/updateEmployee.js' %}"></script>
     <style>
         body {

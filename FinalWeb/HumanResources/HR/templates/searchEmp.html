@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include 'navbar.html' %}
     {% load static %}
     <meta charset="UTF-8" />
 
     <title>Search Employee</title>
 
     <link rel="stylesheet" href="{% static 'css/searchEmp.css'%}" />
+    {% include 'navbar.html' %}
 
-    <script type="text/javascript" src="{% static 'js/searchEmp.js' %}"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'js/searchEmp.js' %}"
+    ></script>
     <meta name="description" content="" />
     <style>
       body {
-          background-image: url("{% static 'image/HP2v3.png' %}");
+        background-image: url("{% static 'image/HP2v3.png' %}");
       }
-  </style>  
+    </style>
   </head>
 
   <body>
-
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <div class="searchbox">
       <br />
       <h1>Search Employee</h1>
       <br />
-      <form id ="searchForm" onsubmit="return validate()"  method="post" action="/getEmployee/">
-           {% csrf_token %}
+      <form
+        id="searchForm"
+        onsubmit="return validate()"
+        method="post"
+        action="/getEmployee/"
+      >
+        {% csrf_token %}
         <label for="empId">Enter Employee first name:</label><br /><br />
-        <input id="empName" class="inputbox" type="text" name="empName" /><br /><br
-        /><br />
+        <input
+          id="empName"
+          class="inputbox"
+          type="text"
+          name="empName"
+        /><br /><br /><br />
         <button id="button" class="submitbutton">Search</button>
-
       </form>
-<br><br><br>
+      <br /><br /><br />
     </div>
-
-
-
-</body>
+  </body>
 </html>

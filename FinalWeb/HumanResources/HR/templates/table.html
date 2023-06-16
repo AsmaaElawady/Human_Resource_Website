@@ -1,8 +1,8 @@
-{% include 'navbar.html' %}
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/table.css' %}">
 {#<link rel="stylesheet" href="{% static 'css/searchEmpOutput.css' %}">#}
+{% include 'navbar.html' %}
 
 <script src="{% static 'js/deleteConfimation.js' %}" ></script>
 <style>
@@ -16,20 +16,20 @@
 <table  id="table">
 
 <tr class = "header">
-<td class = "header">ID</td>
-<td class = "header">Name</td>
-<td class = "header">Email</td>
-<td class = "header">Phone Number</td>
-<td class = "header">Address</td>
-<td class = "header">Salary</td>
-<td class = "header">Number of <br> Vacation days</td>
-<td class = "header">Number of days <br> Approved</td>
-<td class = "header">Date Of Birth</td>
-<td class = "header"> Gender</td>
-<td class = "header">Status</td>
-<td class = "header">Maritual <br> Status</td>
-<td class = "header"></td>
-<td class="header"></td>
+<th class = "header">ID</td>
+<th class = "header">Name</td>
+<th class = "header">Email</td>
+<th class = "header">Phone Number</td>
+<th class = "header">Address</td>
+<th class = "header">Salary</td>
+<th class = "header">Number of <br> Vacation days</td>
+<th class = "header">Number of days <br> Approved</td>
+<th class = "header">Date Of Birth</td>
+<th class = "header"> Gender</td>
+<th class = "header">Status</td>
+<th class = "header">Maritual <br> Status</td>
+<th class = "header"></td>
+<th class="header"></td>
 </tr>
 {% for x in mymembers %}
 <tr>
@@ -45,8 +45,8 @@
 <td>{{ x.Gender }}</td>
 <td>{{ x.Status }}</td>
 <td>{{ x.MARITALSTATUE }}</td>
-<td class="btn"><button><a href="update/{{ x.EmployeeID }}" class="link">Update </a></button></td>
-<td class="btn"><button><a href="delete/{{ x.EmployeeID }}" class="link"  onclick="confirmDelete()">Delete</a></button></td>
+<td class="btn"><button class = "button"><a href="update/{{ x.EmployeeID }}" class="link">Update </a></button></td>
+<td class="btn"><button class = "button"><a href="delete/{{ x.EmployeeID }}" class="link"  onclick="confirmDelete()">Delete</a></button></td>
 </tr>
 {% endfor %}    
 </table>
