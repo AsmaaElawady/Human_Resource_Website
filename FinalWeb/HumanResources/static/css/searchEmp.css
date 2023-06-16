@@ -1,7 +1,4 @@
-h1{
-    font-size: 27px;
-    font-family: Calibri,'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
-}
+
 
 .searchbox{
     text-align: center;
@@ -134,3 +131,10 @@ table {
     margin-right: 5%;
   }
   
+
+  
+h1{
+  color: #12519f;
+  font-size: 40px;
+  margin: 0;
+}
