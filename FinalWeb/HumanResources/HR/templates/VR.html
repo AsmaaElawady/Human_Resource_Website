@@ -74,9 +74,9 @@
                         {{instance.fields.VFStatus}}
                     </td>
                     <td>
-                        <button class = "button"><a href="approve/{{ instance.fields.VFName }}" class="link"> Approve </a></button>
+                        <button class = "button"><a href="approve/{{ instance.fields.VFName }}/{{ instance.fields.VFID }}" class="link"> Approve </a></button>
                     </td>
-                    <td><button class = "button"><a href="reject/{{instance.fields.VFName}}" class="link"> Reject </a></button>
+                    <td><button class = "button"><a href="reject/{{instance.fields.VFID}}" class="link"> Reject </a></button>
                     </td>
                 </tr>
             {%endfor%}
