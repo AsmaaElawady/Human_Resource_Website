@@ -21,7 +21,7 @@ def vacationRequest(request):
   return render(HttpResponse, 'VR.html', context)
 
 def index(request):
-  return render(request, 'HomePage.html')
+  return render(request, 'homePage.html')
   
 def add(request):
   template = loader.get_template('phase1.html')
@@ -51,7 +51,7 @@ def delete(request, EmployeeID):
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
 
   member.delete()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('HomePage'))
 
 
 def update(request, EmployeeID):
@@ -81,12 +81,12 @@ def approve(request, name):
 
   vacationForm = RegisteredVacationForm.objects.get(VFName=name)
   vacationForm.delete()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('HomePage'))
 
 def reject(request, name):
   vacationForm = RegisteredVacationForm.objects.get(VFName=name)
   vacationForm.delete()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('HomePage'))
 
 def updaterecord(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -118,7 +118,7 @@ def fillVacationFormFields(request, EmployeeID):
   member.EmployeeName = EmployeeName
   member.EmployeeID = EmployeeID
   member.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('HomePage'))
 
 def phase1(request):
   return render(request, 'phase1.html')
@@ -195,5 +195,5 @@ def addVacationForm(request,EmployeeID):
   VFData = RegisteredVacationForm(VFName = VFName, VFID = VFID, VFFromDate = VFFromDate
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('HomePage'))
 

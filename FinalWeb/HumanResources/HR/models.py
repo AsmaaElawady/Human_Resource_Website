@@ -27,6 +27,9 @@ class RegisterForm(models.Model):
     MARITALSTATUE = models.CharField(max_length=8,choices=ms)
 
 
+def __str__(self):
+    return f"{self.EmployeeName} {self.email} {self.phone} {self.Addres} {self.Salary} {self.NumberVacation} {self.NumberApprovedVacation}{self.Date}"
+
 
 
 class RegisteredVacationForm(models.Model):
@@ -37,6 +40,8 @@ class RegisteredVacationForm(models.Model):
     VFReason = models.TextField()
     VFStatus = models.CharField(max_length = 15)
 
+def __str__(self):
+    return f"{self.VFFromDate} {self.VFID} {self.VFFromDate} {self.VFToDate} {self.VFReason} {self.VFStatus} "
 
 # class Upform(models.Model):
 #     EmployeeID=models.CharField(max_length=100,primary_key=True)

@@ -7,7 +7,7 @@
 }
 .navBar a{
     float: left;
-    color: #2f56d6;
+    color: #12519f;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 19px;
@@ -22,6 +22,6 @@
 
 /* Add a color to the active/current link */
 .navBar a.active {
-    background-color: #458fe8;
+    background-color: #12519f;
     color: white;
 }

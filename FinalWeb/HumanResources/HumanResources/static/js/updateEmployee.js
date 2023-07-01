@@ -15,7 +15,6 @@ function getCookie(name) {
     return cookieValue;
 }
 function loadDoc() {
-    console.log("the problem is ");
     var name = document.getElementById("new").innerHTML;
     var id = document.getElementById("newID").innerHTML;
     var mail = document.getElementById("mail").innerHTML;
@@ -31,16 +30,7 @@ function loadDoc() {
     xhttp.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
     xhttp.onreadystatechange = function()
     {
-        if(xhttp.status === 200 && xhttp.readyState === 4)
-        {
-            console.log("employee updated successfully");
-            window.location.href='/editinfo.html';
-        }
-        else
-        {
-            console.error('error updating employee: ' + xhttp.status);
-
-        }
+        window.location.href='/editinfo.html';
         xhttp.send('new=' + encodeURIComponent(name) + '&newID='+ encodeURIComponent(id) 
         + '&num='+ encodeURIComponent(phone) + '&a='+ encodeURIComponent(add) 
         + '&s='+ encodeURIComponent(salary)  + '&mail='+ encodeURIComponent(mail) 

@@ -1,7 +1,7 @@
-{% include 'navbar.html' %} {% load static %}
+{% load static %}
 
 <link rel="stylesheet" href="{% static 'css/vacationForm.css' %}" />
-
+{% include 'navbar.html' %}
 {% block content%}
 <!DOCTYPE html>
 <html>
@@ -9,15 +9,17 @@
     <meta charset="UTF-8" />
     <title>Vacation Form</title>
     <meta name="describtion" content="" />
+    
+<script type="text/javascript" src="{% static 'js/vacationForm.js' %}"></script>
     <style>
       body {
         background-image: url("{% static 'image/HP2v3.png' %}");
       }
     </style>
   </head>
-  <body id="bodyy">
+  <body id="bodyy" onsubmit="return onsubmit()">
     <div>
-      <h1>Fill the Vacation Form</h1>
+      <h1 id="FVF">Fill the Vacation Form</h1>
       <form class="formData" method="POST" action="addVacationForm/{{mymember.EmployeeID}}">
         {% csrf_token %}
         <br /><br />
@@ -61,7 +63,7 @@
         <br />
         <div>
           <br />
-          <input type="submit" id="sbmtbtn" />
+          <input type="submit" id="sbmtbtn" onclick="onSubmit()">
         </div>
       </form>
       <br />
