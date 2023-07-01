@@ -3,26 +3,25 @@ from django.template import loader
 from django.urls import reverse
 from .models import RegisterForm 
 from .models import RegisteredVacationForm
-
-# from .models import Upform 
 from django.shortcuts import render
 from django.views.decorators.csrf  import csrf_exempt
-# from .models import Upform
 
-#To capture the records from database in dictionary.
+
 def vacationRequest(request):
   from django.core import serializers
   data = serializers.serialize("python", RegisteredVacationForm.objects.all())
-
+  
   context = {
     'data' : data
   }
 
   return render(HttpResponse, 'VR.html', context)
 
+
 def index(request):
   return render(request, 'homePage.html')
   
+
 def add(request):
   template = loader.get_template('phase1.html')
   return HttpResponse(template.render({}, request))
@@ -62,6 +61,7 @@ def update(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
+
 def vacationFormFields(request, EmployeeID):
   mymember = RegisterForm.objects.get(EmployeeID=EmployeeID)
   template = loader.get_template('searchEmpOutput.html')
@@ -70,22 +70,29 @@ def vacationFormFields(request, EmployeeID):
   }
   return HttpResponse(template.render(context, request))
 
-def approve(request, name):
-  num1 = RegisterForm.objects.filter(EmployeeName=name)
+
+def approve(request, name, id):
+  num1 = RegisterForm.objects.filter(EmployeeID=id)
   n1 = num1[0].NumberVacation
   n2 = num1[0].NumberApprovedVacation
 
-  # num2 = RegisterForm.objects.filter(EmployeeName=name).only('NumberApprovedVacation')
-  RegisterForm.objects.filter(EmployeeName=name).update(NumberVacation = n1 - 1)
-  RegisterForm.objects.filter(EmployeeName=name).update(NumberApprovedVacation = n2 + 1)
+  num2 = RegisteredVacationForm.objects.filter(VFID=id)
+  n3 = num2[0].VFFromDate
+  n4 = num2[0].VFToDate
+
+  n5 = n4 - n3
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberVacation = n1 - n5.days - 1)
+  RegisterForm.objects.filter(EmployeeName=name).update(NumberApprovedVacation = n2 + n5.days + 1)
 
   vacationForm = RegisteredVacationForm.objects.get(VFName=name)
   vacationForm.delete()
   return HttpResponseRedirect(reverse('HomePage'))
 
-def reject(request, name):
-  vacationForm = RegisteredVacationForm.objects.get(VFName=name)
-  vacationForm.delete()
+
+
+def reject(request, id):
+  vacationForm = RegisteredVacationForm.objects.filter(VFID=id)
+  vacationForm[0].delete()
   return HttpResponseRedirect(reverse('HomePage'))
 
 def updaterecord(request, EmployeeID):
@@ -97,7 +104,6 @@ def updaterecord(request, EmployeeID):
   Salary = request.POST['Salary']
   NumberVacation = request.POST['NumberVacation']
   NumberApprovedVacation = request.POST['NumberApprovedVacation']
-  #status = request.POST['Status']
   member = RegisterForm.objects.get(EmployeeID=EmployeeID)
   member.EmployeeName = EmployeeName
   member.EmployeeID = EmployeeID
@@ -107,9 +113,9 @@ def updaterecord(request, EmployeeID):
   member.Salary = Salary
   member.NumberVacation = NumberVacation
   member.NumberApprovedVacation = NumberApprovedVacation
-  # member.Status = status
   member.save()
   return HttpResponseRedirect(reverse('table'))
+
 
 def fillVacationFormFields(request, EmployeeID):
   EmployeeName = request.POST['EmployeeName']
@@ -126,7 +132,6 @@ def phase1(request):
 
 def table(request):
   mymembers = RegisterForm.objects.all().values()
-  # template = loader.get_template('phase1.html')
   template = loader.get_template('table.html')
   context = {
     'mymembers': mymembers,
@@ -137,12 +142,12 @@ def table(request):
 def HomePage(request):
   return render(request, 'HomePage.html')
 
+
 def home(request):
   return render(request, 'home.html')
 
+
 def VRDisplay(request):
-    # employees = RegisteredVacationForm.objects.values('VFName')
-    # return render(request, 'VR.html', {'employees': employees})
     from django.core import serializers
     data = serializers.serialize("python", RegisteredVacationForm.objects.all())
 
@@ -165,16 +170,14 @@ def addVF(request,EmployeeID):
 def searchEmployee(request):
   return render(request,'searchEmp.html')
 
+
 @csrf_exempt
 def getEmployee(request):
-
     name = request.POST['empName']
-
     employees = RegisterForm.objects.filter(EmployeeName__icontains = name)
     results_html = {}
     for employee in employees:
       results_html[employee.EmployeeName] = employee.EmployeeID
-
 
     context = {"results":results_html}
 
@@ -196,4 +199,3 @@ def addVacationForm(request,EmployeeID):
                       , VFToDate = VFToDate, VFReason = VFReason, VFStatus = VFStatus)
   VFData.save()
   return HttpResponseRedirect(reverse('HomePage'))
-
