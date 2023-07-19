@@ -1,6 +1,7 @@
 # Human_Resource_Website
 
-features of our application: -
+features of our application:-
+
 Add Employees and it saved in database.
 Edit employee or delete it.
 show all employees from the database.
